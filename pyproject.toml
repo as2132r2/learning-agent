@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leo-learning-agent"
+version = "0.1.0"
+description = "A local-first LangGraph learning assistant with durable human approval"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "李鑫", email = "20225802@stu.neu.edu.cn"}]
+dependencies = [
+  "langchain-core>=1.0,<2", "langchain-openai>=1.0,<2",
+  "langgraph>=1.0,<2", "langgraph-checkpoint-sqlite>=3,<4",
+  "pydantic>=2.10,<3", "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+rag = ["fastembed>=0.7,<1"]
+
+[project.scripts]
+learning-agent = "learning_agent.app:main"
+
+[tool.setuptools.packages.find]
+include = ["learning_agent*"]
+
+[tool.setuptools.package-data]
+learning_agent = ["documents/*.txt"]
