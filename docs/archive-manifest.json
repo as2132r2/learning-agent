@@ -1,0 +1,2678 @@
+{
+  "scope": "Day01-Day35 existing local materials",
+  "files": [
+    {
+      "path": "day01/notes/LangChain-Day1-学习笔记.md",
+      "sha256": "25b7c30ae6557db50975b8ae7803caf53087da9a6fa463473a37adf120935096",
+      "bytes": 21764,
+      "sanitized": true
+    },
+    {
+      "path": "day01/python/hello.py",
+      "sha256": "0dd532bd2ea357aa714c790e24935221283a0567d8d51c193fec1c6421b2f0f0",
+      "bytes": 735,
+      "sanitized": false
+    },
+    {
+      "path": "day01/python/messages.py",
+      "sha256": "0f39ffe8e15a859907aa5a60a0e05c02c9099861676c202f3095cf03db486b4f",
+      "bytes": 569,
+      "sanitized": false
+    },
+    {
+      "path": "day01/python/prompt.py",
+      "sha256": "978380c612a4fc368de8db44bea2c2daecdd9de12ac33a6865b0a2774c974dd1",
+      "bytes": 667,
+      "sanitized": false
+    },
+    {
+      "path": "day01/python/structured.py",
+      "sha256": "3ee6f9071fec5d1313b3beb959ea03f07755fd66873655438fa56ba9d493a2af",
+      "bytes": 1456,
+      "sanitized": false
+    },
+    {
+      "path": "day02/notes/LangChain-Day2-学习笔记.md",
+      "sha256": "822982da5d71350b4f1a16e5e071aff168ec7619e049ecc199604cbdd3bddefc",
+      "bytes": 21905,
+      "sanitized": true
+    },
+    {
+      "path": "day02/python/day2_memory.py",
+      "sha256": "2fb58527d220fa3c3451c434a0f04cef618120770a87b7154f138c3778aaeec2",
+      "bytes": 5747,
+      "sanitized": false
+    },
+    {
+      "path": "day02/python/day2_memory_annotated.py",
+      "sha256": "780569ca81f7eb40e9acc4104ba35898ea54d8f3a1039913b557f08a30628c00",
+      "bytes": 14528,
+      "sanitized": false
+    },
+    {
+      "path": "day03/notes/LangChain-Day3-学习笔记.md",
+      "sha256": "f03d158d6208b7c7875fae362399f7340ded22e2989e02ed619b16375a10f811",
+      "bytes": 16776,
+      "sanitized": false
+    },
+    {
+      "path": "day03/python/day3_multiple_tools.py",
+      "sha256": "a3faff3054538e8f9347e68c3c13d7617390c7d448b10034217c1444d5f98b7a",
+      "bytes": 2900,
+      "sanitized": false
+    },
+    {
+      "path": "day03/python/day3_tool_agent.py",
+      "sha256": "21096b909f459093787ae99ef297544d372a7924fd72a253df5a0ae1b9929b61",
+      "bytes": 11768,
+      "sanitized": false
+    },
+    {
+      "path": "day03/python/day3_tool_basic.py",
+      "sha256": "71d23fb377eca9549ab56b1da4939d7360b0fdd8f92317bf5b7ad0017ae79fd1",
+      "bytes": 865,
+      "sanitized": false
+    },
+    {
+      "path": "day03/python/day3_tool_calling.py",
+      "sha256": "227a15641351b3ca80710be9266e7271b5b21a93bf2b0b771f7a302f46a7256c",
+      "bytes": 1553,
+      "sanitized": false
+    },
+    {
+      "path": "day03/python/day3_tool_execution.py",
+      "sha256": "68ec897ce4caacd7969a29591edec939db44e7fa9b2c2a4d7d218f2e047d5b8b",
+      "bytes": 2604,
+      "sanitized": false
+    },
+    {
+      "path": "day03/python/day3_tool_graph.py",
+      "sha256": "b7124a977c33017b12bdf3d447fbf422ff31f667fa1520f4eef1af6b5573dacf",
+      "bytes": 3226,
+      "sanitized": false
+    },
+    {
+      "path": "day04/notes/LangChain-Day4-学习笔记.md",
+      "sha256": "0c569b7211a7b912dfaaf2c34122ddbc3a5653f32401b45685776ea398cc1223",
+      "bytes": 10963,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_agent_audit.py",
+      "sha256": "56e5de713e3a136e2a84bcebf54c2820ef16fa7f316e38d0f781d50470ef88e0",
+      "bytes": 17258,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_agent_edit.py",
+      "sha256": "75d874eca732380f05bd6818a45b70f5f30ac03275828398fd851ad032860270",
+      "bytes": 15153,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_agent_interrupt.py",
+      "sha256": "823e494fc860cefa412ece96b38757f548d5e8f6256a7a44bb3c13dc5df40788",
+      "bytes": 13458,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_agent_validation.py",
+      "sha256": "7ab898eefeb33a41a1c83ab377a66dbd48a9a7dc9bd24d53bfd1a4157f29e91b",
+      "bytes": 16877,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_interrupt_basic.py",
+      "sha256": "b5e5dea6bc88810538af8db599882a8beccdacea1c2240a32e3a17cfb59e4f33",
+      "bytes": 6758,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_interrupt_persistent.py",
+      "sha256": "b4667e5515557a03bee37a5d1dfa93927b8866ca692c825fcfeede57a8585d97",
+      "bytes": 8640,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_manual_approval.py",
+      "sha256": "69d0aff2981bec5846d4c0f05a5c862f6113952d8f77af243c462c82c02318a6",
+      "bytes": 6658,
+      "sanitized": false
+    },
+    {
+      "path": "day04/python/day4_safe_agent.py",
+      "sha256": "d03652eca4053ed0a9e1e8aba104388511d94bda9b2c0214229f507eec35d68f",
+      "bytes": 20061,
+      "sanitized": false
+    },
+    {
+      "path": "day05/notes/LangChain-Day5-学习笔记.md",
+      "sha256": "b85cd24310a5b8f863b19de0d23bcf909acea5158c5ec658c3bb073190407ee7",
+      "bytes": 14626,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_conversational_rag.py",
+      "sha256": "0ce11337aa04a30b9a98dd5e98c38fad9cff685074d0929c7ac45e73e90385b4",
+      "bytes": 13625,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_document_basic.py",
+      "sha256": "ae85a3ab8231d3e533b23f4bc2233bfd2ca32d8a4f19cd61ebffc4e02803f88a",
+      "bytes": 4384,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_embedding_basic.py",
+      "sha256": "df04b14e6da4a4dd96955d4af04136ce8aed7aad24d1bbc0052b1dcd7cf43149",
+      "bytes": 4857,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_rag_basic.py",
+      "sha256": "8e65dc5b7d36a1bbe774f54c9b1247ba602764577973d47999fcaba1c18579e2",
+      "bytes": 9128,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_rag_guard.py",
+      "sha256": "a24a821b8685d0eab10337600e87592907dda726036b5db749f993038502c017",
+      "bytes": 8517,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_rag_tool_agent.py",
+      "sha256": "4de82bbd46b3b4df577bbd15ed3f86e15bedc2e24816836120bedc51d55ebed4",
+      "bytes": 12096,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_real_embedding.py",
+      "sha256": "831106ba397c84dc84097baf698d0872f09878d38973f25508ca3d24af51b329",
+      "bytes": 6784,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_retriever_basic.py",
+      "sha256": "fa07c5f77b1ade3a4d437f2c2416f56b6a6c70cf604f3cdfe55476e7f0a81627",
+      "bytes": 5733,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_similarity_basic.py",
+      "sha256": "7b14e1f45b6573188823ccca9ad960e1a2afdccb621b6843771416143ca00f51",
+      "bytes": 6834,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_text_splitter.py",
+      "sha256": "4532cf781838228dcdee24f88afddcb6207255faf8efc7cea47db289afdc392e",
+      "bytes": 4384,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_vector_store.py",
+      "sha256": "3277387fb2b1484431c4c8a9f0b9e8148a27e86caf0013fc5c22c1198dfcbfaf",
+      "bytes": 6183,
+      "sanitized": false
+    },
+    {
+      "path": "day05/python/day5_vector_store_persistent.py",
+      "sha256": "ef65bd8a1314dbe4fedc5703ee990f007aa51e52048713c624496746c87dc96d",
+      "bytes": 8057,
+      "sanitized": false
+    },
+    {
+      "path": "day06/documents/markdown/day6_langgraph.md",
+      "sha256": "fe8119f5bf7dfc82fb670c566e0a983e8475637902ed6d5926506577932afd7d",
+      "bytes": 434,
+      "sanitized": false
+    },
+    {
+      "path": "day06/documents/pdf/day6_rag_test.pdf",
+      "sha256": "5e8380a953f155e479e4f1f1bd377a7ef356093d7dca0b954e7466890f4ce83e",
+      "bytes": 5047,
+      "sanitized": false
+    },
+    {
+      "path": "day06/documents/txt/day6_c_language.txt",
+      "sha256": "25842acd5811444e4495ad434fc908d76d2e3a8550e4afcb5bfac158fc43ca8f",
+      "bytes": 335,
+      "sanitized": false
+    },
+    {
+      "path": "day06/documents/txt/day6_langchain.txt",
+      "sha256": "3e30ca962f66c89e902d3ab78a40b3b855a78ece10bba4516d7b994f110decbb",
+      "bytes": 560,
+      "sanitized": false
+    },
+    {
+      "path": "day06/notes/LangChain-Day6-学习笔记.md",
+      "sha256": "2055663b3809355d4428bd03d415d70a135c9448f93008eaa2b9ba2130ea6d3b",
+      "bytes": 9861,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_chunk_ids.py",
+      "sha256": "e13c71f94832d58f5363a1759e507718b10408f77194248298871e50ede963b1",
+      "bytes": 6579,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_directory_loader.py",
+      "sha256": "f4f20a298456493b1e3c99e1c455eeda34252561af03f4e3ea8043721613c235",
+      "bytes": 4787,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_file_fingerprint.py",
+      "sha256": "6c198f0e46872ab148b2f51a78226fc0d255d7bdf95535b0d9a2f8e9701788fa",
+      "bytes": 10965,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_incremental_index.py",
+      "sha256": "639ea495ad86b89826a09b836a3a1fc2c2931c6c978f35f236495fa94bc654fd",
+      "bytes": 11049,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_incremental_update.py",
+      "sha256": "aaf390322e912228fbd841b7694d9e7505af734236e5bceb5708a018064f9c70",
+      "bytes": 10585,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_knowledge_cli.py",
+      "sha256": "848a961a15aabc6feb5621bedb9aa472c9ef81dc42c1d28bd53d8987d9956a37",
+      "bytes": 17883,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_multi_format_loader.py",
+      "sha256": "b21ffe687b6520db00eed8a8fba21397983a6e66dad3a9fab19cc18b6ed954b7",
+      "bytes": 4981,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_neighbor_rag.py",
+      "sha256": "6a4972abd9bb4b7cb37ed65eefd5bc3d19e132027749fadfddb6a53915fd6bd8",
+      "bytes": 8232,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_neighbor_retrieval.py",
+      "sha256": "c1df7554b64a0efdb387cbf36f7256fd188ff6456da2dff5686cddf08f19f628",
+      "bytes": 7713,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_rag_answer.py",
+      "sha256": "75ed7cf25f2ffc4b5d9c0201d74ee001395c0dbcab8adabeb99849813f205437",
+      "bytes": 6895,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_relevance_guard.py",
+      "sha256": "51fc93512736dc215ebeeae8363e987d5aea1328010528ade0fd60ca199e1bb3",
+      "bytes": 7417,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_retrieval_evaluation.py",
+      "sha256": "815674c2fd1ca016083f2fff55565ed718fff6e9b4e05abf1319ce6342ba933e",
+      "bytes": 8401,
+      "sanitized": false
+    },
+    {
+      "path": "day06/python/day6_text_loader.py",
+      "sha256": "6683991afe417cfd6aca953d028581ce4998b4382ceae355271b4882d05dbc90",
+      "bytes": 3786,
+      "sanitized": false
+    },
+    {
+      "path": "day06/tools/create_day6_test_pdf.py",
+      "sha256": "fdcdf07803c8439b145df72142d218cef2a3102a35418688cb8ccdaf6dc77cba",
+      "bytes": 4479,
+      "sanitized": false
+    },
+    {
+      "path": "day06/visuals/day6-rag-test-1.png",
+      "sha256": "d6ab7f9441adb8386405bcad3d5b839961c8389d9d079a7616cd55e81ba0bb03",
+      "bytes": 113668,
+      "sanitized": false
+    },
+    {
+      "path": "day06/visuals/day6-rag-test-2.png",
+      "sha256": "fa24ee0f1d62c55d7861db5b46f70b413890baf2e4465b68c52f653d1f3675f6",
+      "bytes": 109218,
+      "sanitized": false
+    },
+    {
+      "path": "day06/visuals/day6-rag-test-page2.png",
+      "sha256": "fa24ee0f1d62c55d7861db5b46f70b413890baf2e4465b68c52f653d1f3675f6",
+      "bytes": 109218,
+      "sanitized": false
+    },
+    {
+      "path": "day07/notes/LangChain-Day7-学习笔记.md",
+      "sha256": "c0f288771aa0689cf9e5812812f75630fdd03131073a5ebae8ef2ecb20c47ec3",
+      "bytes": 9164,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_answer_grader.py",
+      "sha256": "958be7743e889d4586172e78d8b3a3a218fae719e7ec4869bcfd285dbb09a195",
+      "bytes": 29378,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_checkpoint_inspector.py",
+      "sha256": "a960b6e50eb20930494ad7850e20683b141670b8e0651a6bf519bbb48815b2d0",
+      "bytes": 39423,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_citation_validator.py",
+      "sha256": "7f27bf4c01e5c36532acc7b5c55cda8e4fb34b425016d0d787c5d85da2a653cb",
+      "bytes": 32095,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_filtered_context_agent.py",
+      "sha256": "ec55ce5151a18f0382abed8a583a071f634e3d413112ce314a003ce6c64ee0c6",
+      "bytes": 21296,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_multi_route_agent.py",
+      "sha256": "c05f465b8582e1fa56cb4ac08d920a357eef522ce9abcb3043e6fa57f8fa5963",
+      "bytes": 18390,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_neighbor_context_agent.py",
+      "sha256": "671b89b64d1a54d7c88a9b120d1f8cfb92ba4d40b774f80e37c71e1bf9f37792",
+      "bytes": 23953,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_persistent_agent.py",
+      "sha256": "9226b0e00dfb46524b6aa1f3d2610c1a0564019f7e134a60af4a4a381e902462",
+      "bytes": 20365,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_query_rewrite.py",
+      "sha256": "cbe3927183f2dd7a06e968c6b05f6a4adf8f81fc0e520b8301d4b11987a14670",
+      "bytes": 17635,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_rag_generation.py",
+      "sha256": "a9294c670bdf9d9311e97c7cba1b90521383999b8434bfa972247602b8d21100",
+      "bytes": 14965,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_recoverable_agent.py",
+      "sha256": "7166e94cda08d6d4d06ceb83c8ddf1286cf05c3b8a9fe3212c47de6d1f2e8ee8",
+      "bytes": 36631,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_resilient_agent.py",
+      "sha256": "35f1cacd92c2e741d332250219e804bdb58e8523d6c339dbb714659a55afc6b4",
+      "bytes": 35000,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_retrieval_guard.py",
+      "sha256": "7345545b06d837a736c373c2d48947afd761a614fca5e3addba5a647f11d1951",
+      "bytes": 13487,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_router_basic.py",
+      "sha256": "e75a95c2f78739ea2a0f1529a715667b9c7057d60aec57989a3b4244fe2751fe",
+      "bytes": 7301,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_router_calculator.py",
+      "sha256": "49a916b72d95bc88009adf9acb96dd8ce446608d826fc1856fc9a307eb9db414",
+      "bytes": 8106,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_router_retriever.py",
+      "sha256": "722efaa0d1edb8af5bbf314a6e369d23c5032a64a0c3e8c9bb0557cf5e1fb642",
+      "bytes": 10825,
+      "sanitized": false
+    },
+    {
+      "path": "day07/python/day7_source_formatter.py",
+      "sha256": "f6c702dac96ac5dba145b09399967c4a7ac151cdca3e5ae9948b0c8b561e011a",
+      "bytes": 33716,
+      "sanitized": false
+    },
+    {
+      "path": "day08/notes/LangChain-Day8-学习笔记.md",
+      "sha256": "417ab65f8464bc0e0a360994e20125bac447d23ad72deabe766615e8b496c1c5",
+      "bytes": 8307,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_dynamic_replanner.py",
+      "sha256": "a92182047e8d294327da510aebfe6e4dc80c10a7b1432acbea5b3dc34a56cfcc",
+      "bytes": 22557,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_approval.py",
+      "sha256": "2effec280c1311542ef8d8878ce6f720f21bdd93bf034260ebc9e4357cf8406f",
+      "bytes": 28727,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_approval_persistent.py",
+      "sha256": "34f84c48f11f94dd8a41bdd1a055cab7d382377cd76927b5a3378ca79bdb374c",
+      "bytes": 29502,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_basic.py",
+      "sha256": "eb09e811fbe6378122da2366cdd2e1aaaf1cc69b6911c9424fffb6c21b0886b3",
+      "bytes": 4804,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_edit_approval.py",
+      "sha256": "b3b9b12775d8abd0ebfc71a1e426b267be42d7da0055758136078fee640aa3fa",
+      "bytes": 34180,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_executor.py",
+      "sha256": "233bc3e2c8233bd351650b20b9dd4708cac95d95aef14b45e34aff4f6afefacb",
+      "bytes": 9344,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_finalizer.py",
+      "sha256": "eb611002ee59492da3c1ffebdcc7417247387660bb59588a37708937ec2666f7",
+      "bytes": 12885,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_graph.py",
+      "sha256": "09d24c3ea444cc0c5eec586703a0312f5d1cd055f76f5ff79ca3501dbdd77763",
+      "bytes": 6312,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_plan_loop.py",
+      "sha256": "72994ffa35abeece6b5009f0113c57696ed749741af3f5508f63ab8dad5dc163",
+      "bytes": 10909,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_step_grader.py",
+      "sha256": "3fcf96a10a22138b047781d0bc4c874a3f96c64b63230e989341256a71fbf376",
+      "bytes": 17710,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_tool_planning_agent.py",
+      "sha256": "beaabe22799d7436294da18a2211adf3f438855a4e8b9b55bce7d284e9831701",
+      "bytes": 38412,
+      "sanitized": false
+    },
+    {
+      "path": "day08/python/day8_versioned_replanner.py",
+      "sha256": "5ed0f7d31b1b12495721222aa8db8b72c82a2b1df6f47590f7f8f379f8123203",
+      "bytes": 24381,
+      "sanitized": false
+    },
+    {
+      "path": "day09/notes/LangChain-Day9-学习笔记.md",
+      "sha256": "381328d6e786c566bc1033e204a141ccfc4c153851202b97e82797fdb6d5aa8a",
+      "bytes": 12649,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_budget_control.py",
+      "sha256": "9f204b55eb9bc62c5bf9b1c03ae06812616a470542a9e70cdcc0223f743a325c",
+      "bytes": 32569,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_final_review.py",
+      "sha256": "814d44d83ee665a32df919a7d25190a835fbd2a9c2a831af94e055db9d43a407",
+      "bytes": 28936,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_human_acceptance.py",
+      "sha256": "95916806f2bd8b6124b18d3273ec722cf673fb4ec65a17e86f7efb5be25a2a7c",
+      "bytes": 37148,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_multi_agent_team.py",
+      "sha256": "1daf2532f60e3645fd18a5a6946f6415b108d0814dea928ad8e63db1fe410252",
+      "bytes": 15238,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_parallel_observable.py",
+      "sha256": "6813883298ec502c69c6748c651620a165607c0242bd63a127c16d423135c67b",
+      "bytes": 25703,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_parallel_persistent.py",
+      "sha256": "9b4839564338a81e611d5cda9d26a940e26a854f8d9dbd49858816c4d36f38a1",
+      "bytes": 21183,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_parallel_review.py",
+      "sha256": "564044b9277dd80f6c430b9f86e0e78c30f1755196c5bd06dbaff46c37f9de02",
+      "bytes": 18019,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_parallel_team.py",
+      "sha256": "97a0858274f07f583f7dd16d3193338f1fc229d789e034e7c1073688d0097280",
+      "bytes": 12506,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_specialist_tools.py",
+      "sha256": "a4483551f19f07b69240165a74b566001b9bb5d5d8b6295d93069be3ea762098",
+      "bytes": 19733,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_supervisor_basic.py",
+      "sha256": "6354dcee565dd5fbb11c983d423ef923a4848cf12451fd0d3953147e1ce8e649",
+      "bytes": 3958,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_supervisor_graph.py",
+      "sha256": "a4c1b68587a0772ffd020f7f882dbe3220540a6ce4000ba261cb61afa14f66f7",
+      "bytes": 8671,
+      "sanitized": false
+    },
+    {
+      "path": "day09/python/day9_supervisor_review.py",
+      "sha256": "1da0b551a15e8a56e7bd5895bcc67b55bd4a3fea28236cd1637fcc7246f1bc62",
+      "bytes": 12738,
+      "sanitized": false
+    },
+    {
+      "path": "day10/notes/LangChain-Day10-学习笔记.md",
+      "sha256": "d3d45b8a182f171d9c5e7708155147c6ced89698969fa7846f005756d917ccd2",
+      "bytes": 10704,
+      "sanitized": true
+    },
+    {
+      "path": "day10/python/day10_circuit_breaker.py",
+      "sha256": "9257009ef9db2c73aac5a6532a48262a6933033397c5fd235fd3c71d0c63a0a2",
+      "bytes": 7885,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_model_cache.py",
+      "sha256": "29ff59ac7bf84ee2115d6ba6b1c99167afd820ff81a14ffad6fa12fa0f70b217",
+      "bytes": 7344,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_model_fallback.py",
+      "sha256": "6292c85cd4e3cd48ae3dbb4b23fb1ca340f5cc01de7c7d63d3a710fff57e0975",
+      "bytes": 8395,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_model_retry.py",
+      "sha256": "bf46803629f32d36a96044c8687adebbb7cc481e06907025eb9364c110b74065",
+      "bytes": 6871,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_observability.py",
+      "sha256": "be81b4c1028cccb3ce11b8a5c2a3fbab699e1435085d2c965c9dafb315677d11",
+      "bytes": 14012,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_rate_limiter.py",
+      "sha256": "9c976078fe5cab55aaae74ca7604e831aeae764c2f49a8343ef5d536149f1c1b",
+      "bytes": 5472,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_reliable_gateway.py",
+      "sha256": "2bae36ee00a43f09517ea9b0c3ccb98d055d55310dc04aa3494f481ba9ad2c57",
+      "bytes": 22250,
+      "sanitized": false
+    },
+    {
+      "path": "day10/python/day10_retry_basic.py",
+      "sha256": "cfe5dcbaf30001dc68fd13d3556ae73f348868867a798ff2090b334e5beb270f",
+      "bytes": 5812,
+      "sanitized": false
+    },
+    {
+      "path": "day11/notes/LangChain-Day11-学习笔记.md",
+      "sha256": "38afc3cc1fc03a922aa4f7ffbcab8c0c7710bf095f55459d1bb833b3bbdd48a3",
+      "bytes": 9009,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_async_test.py",
+      "sha256": "34232a8d5c0a6fe77c68449d754f4d842e51fff2f9e7a0cdee69526f04401d0c",
+      "bytes": 3445,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_failure_injection.py",
+      "sha256": "9bde94450cb4022d4cd6fd5a77fdaeaa42ca2de2ec570867f3601353e84caa41",
+      "bytes": 4465,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_graph_test.py",
+      "sha256": "5fa80ec922357523a3600a8e54738f61d42acddb6734561f72121714326c5268",
+      "bytes": 4324,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_mock_test.py",
+      "sha256": "ed0d38161263940acb5359eed3e501ea7facf707a5048b9e0a956b0beaf10d30",
+      "bytes": 4653,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_quality_gate.py",
+      "sha256": "e260ba5383f934718ed467b23c5d4bb852741e407b9dd135441b69fb3a92be5e",
+      "bytes": 3830,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_rag_integration_test.py",
+      "sha256": "fa2c8ba564bac714b72f437c8ce90c5b3b4fa823d65ef6dc3ed06b9430089fca",
+      "bytes": 4552,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_regression_eval.py",
+      "sha256": "e4e0f54fca704738115f33f3588289dbf3466e63923cbf71c207738cc916d1c7",
+      "bytes": 5442,
+      "sanitized": false
+    },
+    {
+      "path": "day11/python/day11_unit_test_basic.py",
+      "sha256": "622ef4ccb9d2e1c4080109256e3b0931d5a6f74bac3d0b05c18fd58db1c80ca4",
+      "bytes": 4507,
+      "sanitized": false
+    },
+    {
+      "path": "day12/notes/LangChain-Day12-学习笔记.md",
+      "sha256": "b93ee53dffa5f90bc192ef6d75c78e0d22c903c24ca32873cf88a4346d81d604",
+      "bytes": 6674,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_config_basic.py",
+      "sha256": "cc4bb9ab3b66b713ae8fa534f2e5436fd7d3d56bed861361cd8fc30bcce95f7c",
+      "bytes": 5200,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_graceful_shutdown.py",
+      "sha256": "03340a11dbb6e2cdbac23b8c39ee07b9ddb521d640382934043ca4b8e0e22627",
+      "bytes": 4184,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_health_check.py",
+      "sha256": "ee3019ef953cdc109f89b029cbc1d1b7a41383ddb0165cf22c829960ee6b2ac8",
+      "bytes": 4288,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_idempotency.py",
+      "sha256": "42ea0e6a1a770337d9cabb3ef8a41586b50d167ff7045462c4507f3bf24d1a26",
+      "bytes": 5693,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_input_validation.py",
+      "sha256": "02f9ed7f1657830629eff3f86cf772a4ad330c7825a9237a233ebe3c9eee537f",
+      "bytes": 3790,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_logging_redaction.py",
+      "sha256": "54cb296c77a740d11c36bac1f7d826b81f70bd3cb8e3c9f2d45eae991eef47c5",
+      "bytes": 5042,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_permission_audit.py",
+      "sha256": "2d5fb2debf871d9c6f1e68ec2708cc7dd1d831d5de920eff110b826b76625660",
+      "bytes": 7289,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_permission_basic.py",
+      "sha256": "561e57957e46290e6a80b3ad803098468ed1a6cdd1981e843756833c7c67bb29",
+      "bytes": 5549,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_secure_tool_gateway.py",
+      "sha256": "3d8401fa75a091615db72a7a317319f440bfead63a928c2b737b149de853ac20",
+      "bytes": 8515,
+      "sanitized": false
+    },
+    {
+      "path": "day12/python/day12_user_quota.py",
+      "sha256": "b287cef32c4afca6f0bb6bf33b37dd2f277f38a20b205c55e7696573b80a2bf4",
+      "bytes": 3524,
+      "sanitized": false
+    },
+    {
+      "path": "day13/.dockerignore",
+      "sha256": "1d9abcaac9691542b5f46f2cde63f361f740a2f9e51b4f1c49deb21ffc11b10f",
+      "bytes": 178,
+      "sanitized": false
+    },
+    {
+      "path": "day13/.env.example",
+      "sha256": "8b9376b305d3d4f5c938236f3ba51ec03a2ea45ee00d4211612c8cd7d5423725",
+      "bytes": 436,
+      "sanitized": false
+    },
+    {
+      "path": "day13/Dockerfile",
+      "sha256": "66373fdc45f2dcc63ea775df1ee00d4fa452bd75162053058fe7ff87dc588594",
+      "bytes": 1193,
+      "sanitized": false
+    },
+    {
+      "path": "day13/notes/LangChain-Day13-学习笔记.md",
+      "sha256": "2021442f6ca5cb208a4ef693d51929f3da79bc5741316b36c210c3ed64d43df7",
+      "bytes": 4008,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_api_acceptance_test.py",
+      "sha256": "24ecf732788550b12db68791cf9b1373e13ccc732529ce38b5dc64cc84d1a76b",
+      "bytes": 4104,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_api_smoke_test.py",
+      "sha256": "918b168e85071ff51142f54430e616c36c88b459d6bfec729b2bdb5066c878fb",
+      "bytes": 3737,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_deploy_api.py",
+      "sha256": "d9448eb498a115bfa3da30845b1662f7c13c6cb1946c0553c50a97f7ea334f56",
+      "bytes": 2165,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_api_basic.py",
+      "sha256": "b50b6adc5ed9781b5ee33e1b70d2c91e1f260ac5a7175abedd696bb701c53e88",
+      "bytes": 5514,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_auth_api.py",
+      "sha256": "bf26ef23512cd79b3397d0dac5eda9f5412d8c7867aa8e8fc95bc43c85359c91",
+      "bytes": 2632,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_auth_client.py",
+      "sha256": "73a58ffbb0ae80753a9c83a58fdecfa8a80976d7f1f175257543449947d9f732",
+      "bytes": 1497,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_client_basic.py",
+      "sha256": "bea2e6ba6f507c81bd8d391dc8548879795c13e8bb56c68e809a5eb3b92e08e0",
+      "bytes": 2472,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_llm_api.py",
+      "sha256": "3f77f17bec2fc2b70c772e3f419853b2e3a00101c693c769af9123373656c714",
+      "bytes": 7801,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_memory_api.py",
+      "sha256": "38335b8224a660feb0048ebcd8835018dcfba2f3e0ab1e0c0bde169051b43a6b",
+      "bytes": 10285,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_memory_client.py",
+      "sha256": "285315690b9a53ee94c3a26f2b2eeeeef19de7fd1f522b31f6adce9036ce577e",
+      "bytes": 2970,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_persistent_memory_api.py",
+      "sha256": "7c174338efe12762ba697e8b5de1aed5b581ccf5ce1f4aeb812a30bd60082928",
+      "bytes": 9340,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_session_api.py",
+      "sha256": "2ff66a5924efaa545b436f3123c464ec468245eb28fb38ca0e0c8d76b3cf33e1",
+      "bytes": 11943,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_session_client.py",
+      "sha256": "591e75208a7983df7bb81758c4dd9600a9051f693db4c37ce70100386567f9a4",
+      "bytes": 3516,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_stream_api.py",
+      "sha256": "94778fabbae912752926e842692280f958f68cd9f31d385a420753769db01fda",
+      "bytes": 4879,
+      "sanitized": false
+    },
+    {
+      "path": "day13/python/day13_http_stream_client.py",
+      "sha256": "4ef226a7c08c117e95929081104d9d9f39db3f066eca407baf40a0714896dc51",
+      "bytes": 1459,
+      "sanitized": false
+    },
+    {
+      "path": "day13/requirements.txt",
+      "sha256": "017d08b1b8dc738c998e59295853ab55e126756c296f86b881c59b1a400bcc82",
+      "bytes": 142,
+      "sanitized": false
+    },
+    {
+      "path": "day14/notes/LangChain-Day14-学习笔记.md",
+      "sha256": "b70ecb7e4cd043e5af94ccf6141c6b6696cacd6f1e64881f51af37b142b7d37b",
+      "bytes": 5587,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_async_basic.py",
+      "sha256": "048b51e73b7cac88f49f020f32d1eeabcbb981089162f575cd7891faeb6a213b",
+      "bytes": 2931,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_async_error_isolation.py",
+      "sha256": "e9b3d0e7453273b4412028af1707bcdfe079f0455ba926ee41eeaf0ad4d201ad",
+      "bytes": 4916,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_async_retry.py",
+      "sha256": "73518a0e134ae90b3a8fda11aac814217cfb334dbd07a9f3494d7061ab305ad0",
+      "bytes": 4744,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_background_queue.py",
+      "sha256": "7ed8b1e79754ae2a1041775ee96a2e04fde943afd4556f98361e7bfcf02d4701",
+      "bytes": 5441,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_client_local_state.py",
+      "sha256": "97d2fb002b62b0c31ba9e466c9378bc2ff6882f61b3dcb27ee7b36084989a45a",
+      "bytes": 5648,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_concurrency_limit.py",
+      "sha256": "470aa5eef85c5926da2c6bf86184c70f24de7ee47c45c09053215dbdee6e770f",
+      "bytes": 4036,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_llm_ainvoke.py",
+      "sha256": "0aa0d52c53297d3dfb545954e9cb21c0917b30ef61d7425d8f9d4c8587bc3c47",
+      "bytes": 2664,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_llm_concurrent.py",
+      "sha256": "159439e95de19b58eaee18523935e53577b232505f5ee196d38892cad36514e7",
+      "bytes": 3652,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_api.py",
+      "sha256": "7a0fbb8875cce8c4f44df002140c9642108ba5d163f2dcc42d77d937b390c766",
+      "bytes": 7103,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_broadcast_api.py",
+      "sha256": "a276d5a90eff79ab9c5be876c908ee3edba5185593f06828da067bcb1d954e19",
+      "bytes": 4615,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_cancel_client.py",
+      "sha256": "4ceb2aa7becc4ece1fe8213858a1ff284b139b59f976775672996dcf81212e63",
+      "bytes": 3141,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_client.py",
+      "sha256": "1f017f33c01dd693cf76baaec3111f36f339b798ac102af3a500e5988b67d9b6",
+      "bytes": 1352,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_persistent_api.py",
+      "sha256": "b3137070cba4225021c862a6d65fed363c35aecaaac96501e7bbefa39d74069d",
+      "bytes": 9610,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_sse_api.py",
+      "sha256": "f91e64101c16eec6e471e087121adaa28afddde53e857ba1299ad36362f4fe7d",
+      "bytes": 3912,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_sse_client.py",
+      "sha256": "38b067354f6c9556a213da8d4de3ff292be0e4d768d5b7d73be7f5ccb08bdccf",
+      "bytes": 1870,
+      "sanitized": false
+    },
+    {
+      "path": "day14/python/day14_task_watch_client.py",
+      "sha256": "68adbe170e1cfc6f85c5ced48ac7eee50ad0662089bdcce949b7dc0ab02aadd4",
+      "bytes": 1421,
+      "sanitized": false
+    },
+    {
+      "path": "day15/.env.example",
+      "sha256": "57073d8488d70de5f07f382da86cd9678c1ef68c2e3447671114f3b4067cadc8",
+      "bytes": 131,
+      "sanitized": false
+    },
+    {
+      "path": "day15/notes/LangChain-Day15-学习笔记.md",
+      "sha256": "1d242720a318ac1b3b5b62dfc1e499f92ecbe73172ab43d9abc5c75c1798c7cf",
+      "bytes": 3493,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_admin_client.py",
+      "sha256": "b7d2085a964f3aa96afcccc800023e66d7d84b83209315de6f8de4e1990f9116",
+      "bytes": 810,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_auth_api.py",
+      "sha256": "7dd8d78614e72fb281ce415ee2050d8f1e04f77a17d26a9f4fab229b47c17965",
+      "bytes": 2910,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_auth_audit_api.py",
+      "sha256": "8f575cd98afdbe694cbd3c29b41aec62bfbfd1a595e11727f3edd68774ce1460",
+      "bytes": 3715,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_auth_audit_viewer.py",
+      "sha256": "76f0464b1315036126c218a02b4d837832a815aafdebc5f0b300d4cadaa26c10",
+      "bytes": 1217,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_auth_client.py",
+      "sha256": "5fee57ef8e5125092f448369a3b43d0eb9e517f7d9c34590320bc0c8a99f9322",
+      "bytes": 982,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_login_lockout_api.py",
+      "sha256": "099bb9a4167c89a18bb882d3b1a9b737638840183fca03a543c200f7bed338c6",
+      "bytes": 4549,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_password_auth_basic.py",
+      "sha256": "f5b86a4f434e444d2aeb4f76d7873e3e93ea3eff1d8b7362c3d0e83561706926",
+      "bytes": 5380,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_real_login_api.py",
+      "sha256": "823abbe88977a2513ab24691641453de68c9b60baf5b20ea56c22a59fd237ba1",
+      "bytes": 2224,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_real_login_client.py",
+      "sha256": "4c6f7053ec325893899e8c3167de9646942e38a7aa5803a415eb8947ac0130a6",
+      "bytes": 1351,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_refresh_api.py",
+      "sha256": "99eccdd638b6ae8bfc125d3187425c83ba03a57a88153c1a2eb8e5f3f15b54f0",
+      "bytes": 4057,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_refresh_client.py",
+      "sha256": "b53f73d44e1f685d5f73f52cf3472b4eecb1408c5893a196c39a5de356b5bc84",
+      "bytes": 1760,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_refresh_token_basic.py",
+      "sha256": "765b44db109de177a2de86469cae9a9228bfb5f5d8d41f72591b21048311274c",
+      "bytes": 6047,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_role_api.py",
+      "sha256": "61b73708cd52a61556b492de5fa25aa6dbc9318023a0078c887fdf2b5deb686b",
+      "bytes": 1760,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_role_token_cli.py",
+      "sha256": "2323a85d2e23c61dff145536ec4163b5a3ce0a126a0b988174c98655da53361a",
+      "bytes": 1650,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_scope_api.py",
+      "sha256": "5b0a657ac8d5c4dfec2f809ecfa2481110d20ac6927a15df9508282d6b097d02",
+      "bytes": 2119,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_scope_client.py",
+      "sha256": "e8155a649afb26b182393def2522e4b06c3320f0e646d6f4f0dfea013b267897",
+      "bytes": 797,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_scope_token_cli.py",
+      "sha256": "995879d96a0f0347b68636cd58a545b721ba322ff6149913c50ffc7b0c55b778",
+      "bytes": 2035,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_signed_token_basic.py",
+      "sha256": "b224f3fb82c9a2fc0042591a9c422f0f874cd52f2772c952e1611f7ad285f6ca",
+      "bytes": 5537,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_token_cli.py",
+      "sha256": "dacc20fb2c350b33865300ba0aa39150be19523adea92e0952f198d92ada277f",
+      "bytes": 3801,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_token_revocation_api.py",
+      "sha256": "1bcecbcd2a4d9cff0b79279550205bcdc9e978e2d0681c31219bbe81fca6a30f",
+      "bytes": 3008,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_token_revocation_client.py",
+      "sha256": "9440a613d9b64fd0b9dcc4796cd8735dd52f1ca41938958070c2f30b82836c24",
+      "bytes": 1202,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_user_task_api.py",
+      "sha256": "6d5b22faff00ac454e94817df1a279c854eeb5b822fa3195e237e6c21ae32ed9",
+      "bytes": 7439,
+      "sanitized": false
+    },
+    {
+      "path": "day15/python/day15_user_task_client.py",
+      "sha256": "5652220a75bebcdc607dd7355c057a2647f1c9103c37739cb156f1ec94474e31",
+      "bytes": 1605,
+      "sanitized": false
+    },
+    {
+      "path": "day16/notes/LangChain-Day16-学习笔记.md",
+      "sha256": "d34877a1eb8fb58413db793143530e23306dab8a3cf37bb701489944ec110d59",
+      "bytes": 12889,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_final_audit_viewer.py",
+      "sha256": "003d8f8b656529f3a9f14201afce09931c112c7b167742a8cafb473ecb95e26b",
+      "bytes": 6389,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_final_mcp_client.py",
+      "sha256": "3f11877952ae7b4a30810012f2e13dfa00fd4384379c64b64985b319c3c6f3a0",
+      "bytes": 9554,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_final_mcp_server.py",
+      "sha256": "4f8ff4317385e401b8fa3c4d64b05dfdb032a20b153c508c5e9296d529c32f26",
+      "bytes": 12642,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_jsonrpc_basic.py",
+      "sha256": "ddc58a4765649b4d3cc6d8e33396ef7af7640e678d8a4a11f0fd8c09a5cfdd05",
+      "bytes": 7075,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_agent_approval.py",
+      "sha256": "96340de1f479e7c2dbb9b6b0f26d1fdf7013fcc8d871879750a3309ecf80dc74",
+      "bytes": 7863,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_auth_client.py",
+      "sha256": "3d3cec498d21aa749dcc54b613d9fd41ce0311f4fbb89c0234f73b32d4b6d461",
+      "bytes": 3354,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_auth_server.py",
+      "sha256": "61511770d0eeb17d7ddd4a6a7d69a0a0e304ce77dfc89518961e2eb96cdf277a",
+      "bytes": 3167,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_contract_tests.py",
+      "sha256": "b45fad27fa279d5ac997f6bcbf3a92d1b9a378738f07ad8a7a407955176a9a88",
+      "bytes": 6569,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_error_handling.py",
+      "sha256": "5a4e1b2bab1dbcd71781c5df42e606d87921df1d91e8f8539dc4035de06bf35f",
+      "bytes": 4341,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_http_agent.py",
+      "sha256": "81efba9ca18499c434a5ebd91f8290f158ee99f59df085e8dc300a1c007bb0da",
+      "bytes": 4750,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_http_client.py",
+      "sha256": "9802f90f355f8c59a039bed598a5024943b1b149ea6c4b5b5f86b986b0242deb",
+      "bytes": 3340,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_http_server.py",
+      "sha256": "964c65f4ffce8554f78e2761adcb6e786b42f39e63744d7009694c2ba666d6f4",
+      "bytes": 2216,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_knowledge_server.py",
+      "sha256": "3a31985e8ebb8e6d7ded387d75aee197660fcf555f1a7e76942753704cc1ab97",
+      "bytes": 2546,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_multi_server_agent.py",
+      "sha256": "cfa0adc1705c1f7f1247d8deb1fdb3784c434632c385e8e7782181fd777a872d",
+      "bytes": 4919,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_prompt_basic.py",
+      "sha256": "3616574f7051326092c1a0afa37f3d9bb78c54191478eb04b1850a5b5c91e529",
+      "bytes": 5328,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_prompt_llm.py",
+      "sha256": "7f64eb5de59569d6b6a5bc5bad0a40fcdbb9f919813a4eda29a4e14b8ad0cf85",
+      "bytes": 5450,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_resource_basic.py",
+      "sha256": "b74e12884ea2390f7bd54919c28aa44c20809e702b128f4286e01a70fdc7e201",
+      "bytes": 4473,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_resource_template.py",
+      "sha256": "df560da1f62d394e5b692075189c84aadf1eae5c8549546ba1d5b61498d99ab9",
+      "bytes": 4409,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_scope_client.py",
+      "sha256": "f51cf192ccafd3611f8839f4aedd47076e3293f553cc99a90bf7e6aec6bb0c1c",
+      "bytes": 2852,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_scope_server.py",
+      "sha256": "721afeb29e1dc6b39ee82235a39b97417ccd365ea994738b9fe24750bd8ec4dc",
+      "bytes": 4389,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_sdk_basic.py",
+      "sha256": "30bdcf2025b2b50f3371e94ad27a324af02561effe8e6e9e580a496e248b0a2f",
+      "bytes": 5442,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_tool_agent.py",
+      "sha256": "6e4d7cbed32afd74afd2fbc27a08a2faf2ea9e39ab422c7cf67dd568f4e9858f",
+      "bytes": 5314,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_mcp_tool_annotations.py",
+      "sha256": "616f297f45652e7f57a65c27bdd9fdfefa55be5071525b41d595e1d762d99930",
+      "bytes": 6337,
+      "sanitized": false
+    },
+    {
+      "path": "day16/python/day16_stdio_transport.py",
+      "sha256": "da04a8bf88dc3f5666eddb5b00e940e06a98a2d35a504c18b80f893f36da433b",
+      "bytes": 8959,
+      "sanitized": false
+    },
+    {
+      "path": "day16/requirements.txt",
+      "sha256": "a27cb8bb5be008361cef1a0dec8aa9f41a63b1b1c079ee8fa463aa6844bc6f5d",
+      "bytes": 33,
+      "sanitized": false
+    },
+    {
+      "path": "day17/notes/Day17-最终代码详细解读.md",
+      "sha256": "fa22c8400ef1177a20b1045fa3a50c33dd962d63295c37e6cf3a15f8a6ea01ad",
+      "bytes": 15301,
+      "sanitized": false
+    },
+    {
+      "path": "day17/notes/LangChain-Day17-学习笔记.md",
+      "sha256": "11017ecce0b39fea5d57880d047c431d31fd286f2230c137b93aa18960148d12",
+      "bytes": 14006,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_async_stream.py",
+      "sha256": "a331869c334e64f11d8bcc94ba8c9295f36ca78c0e8a37fbb3548f1f4179932b",
+      "bytes": 5375,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_cancel_client.py",
+      "sha256": "ba8ea9c0fa34e4b5a741c004d8385d1188dd371d6b50de9f29a510b13488fb5d",
+      "bytes": 7368,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_client.py",
+      "sha256": "760a91dae203ddaf3b986ff3fd722967948251160aab4a728251dad5d2515eed",
+      "bytes": 7586,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_concurrent_clients.py",
+      "sha256": "8371493ab227c3e835254ffdcd91400f7889ebc1c6cd0d956e6186509b117747",
+      "bytes": 9200,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_disconnect_server.py",
+      "sha256": "518638a1c563d7187e0ef5e9e0f77606cc4df3ac943f44691378711bd66cd254",
+      "bytes": 11005,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_heartbeat_client.py",
+      "sha256": "d76f1153c924770cd764d10ab31a5f8174eb784ee34c04cbb0674b17496ba17a",
+      "bytes": 6821,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_heartbeat_server.py",
+      "sha256": "4ec4bc205cbdc9f60f53d7c257a2167df84032dcc8293e65f9630c4ecffbec1a",
+      "bytes": 10342,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_limit_test.py",
+      "sha256": "0a9c1ed0b2017edf0d478c832fa8cf0331b0720d77226dabd417d91652af4ed4",
+      "bytes": 9327,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_limited_server.py",
+      "sha256": "3e4259a29ac946f37e6e457b3c6f0863b6d756ff8c5a1e42835b6770f622629a",
+      "bytes": 9488,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_resume_client.py",
+      "sha256": "f8b7358aa7fb0fb8d65ab74a5750bd47b16117810f62192480610c49cd1b31ff",
+      "bytes": 6851,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_resume_server.py",
+      "sha256": "536f1f74101a785fd84297474e45db4730375d7b2150f50455fa0f539da1a9e5",
+      "bytes": 6061,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_server.py",
+      "sha256": "3676f8ff4f02e4fbadc669dc4820c9e8430ca109b19d8544cbaeacde1693fcf9",
+      "bytes": 7112,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_sse_timeout_cancel.py",
+      "sha256": "b695d627c6bcf874a56ef051f256c1c0fc5c43342dc777fe770ad80b8a8f1db6",
+      "bytes": 9164,
+      "sanitized": false
+    },
+    {
+      "path": "day17/python/day17_stream_basic.py",
+      "sha256": "2a1baf29164c71ec7fceab4ae5b53734d4db2fa13f647739aa6b0cba4983b537",
+      "bytes": 4307,
+      "sanitized": false
+    },
+    {
+      "path": "day18/notes/LangChain-Day18-学习笔记.md",
+      "sha256": "9d4e264ff491f0396d07497a525f8eda24b8cc90aa5ff839056cf96cf6d2d3ff",
+      "bytes": 12144,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_final_websocket_client.py",
+      "sha256": "21506afd827125dd22f25e3a2e0ad186109d4031f8db4a538147917e8263e94e",
+      "bytes": 6105,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_final_websocket_server.py",
+      "sha256": "c50d0224556301f5957c77d5ce272648e50a294632766f35cfdd65608a833b11",
+      "bytes": 9268,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_basic_client.py",
+      "sha256": "39c2dbd73755da247bf4490738117c3575816c8367f1ba23fa1c251c02fbcab7",
+      "bytes": 3455,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_basic_server.py",
+      "sha256": "a280665c1f3f5fa0f582242fca03d6429855e84be222d10e8e42431b875b8a8f",
+      "bytes": 6415,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_cancel_client.py",
+      "sha256": "2f57ade1477cd83f6e5265b74415247a3acd70895826369f26fc7943f27d8849",
+      "bytes": 4443,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_cancel_server.py",
+      "sha256": "4b498752c87f7bcf333bb6f369bb54f3298f18a33e5ac583bc7746d9d81823ce",
+      "bytes": 9521,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_llm_client.py",
+      "sha256": "44e3edf6ae01d8073289de3ce14d488597d16ab1026a145640e8f34534f0bf51",
+      "bytes": 3954,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_llm_server.py",
+      "sha256": "37db46d479b949ddaabab4b8a8c159f949f6430859b66891c4e29e33c2b9faa7",
+      "bytes": 5903,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_multi_client.py",
+      "sha256": "bbdc306d7e299a95b50159204eb207d0d0b421944edb77006a462850ff284aa3",
+      "bytes": 5325,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_multi_server.py",
+      "sha256": "b22456de888c30d94470f675fd6e31d2df2b1320e6f07ee97c116d273bfbe432",
+      "bytes": 7067,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_protocol_client.py",
+      "sha256": "f85feaad0b11a920eb5f851d97f6a9fd9536d8adc1c206693129b1ade745fd0d",
+      "bytes": 4246,
+      "sanitized": false
+    },
+    {
+      "path": "day18/python/day18_websocket_protocol_server.py",
+      "sha256": "610f8d8faaf8f23a865ea44c5946b2108abcadfb147a86c7ec829e9538553e8f",
+      "bytes": 6444,
+      "sanitized": false
+    },
+    {
+      "path": "day19/css/day19_final_browser_chat.css",
+      "sha256": "a466050fe23a758613883280296b69ae6e4c554eb695eec1f64d07f483359607",
+      "bytes": 2101,
+      "sanitized": false
+    },
+    {
+      "path": "day19/html/day19_browser_basic.html",
+      "sha256": "873b2232d9ec3057b5ea96b57ab944153944c2355dfbd61c81784317ace4655b",
+      "bytes": 4192,
+      "sanitized": false
+    },
+    {
+      "path": "day19/html/day19_browser_control.html",
+      "sha256": "94c430dfc7a8e258a842cf5a0175bb0109bbe2cccb4a6fb17e93570574fd9d7e",
+      "bytes": 7572,
+      "sanitized": false
+    },
+    {
+      "path": "day19/html/day19_browser_llm.html",
+      "sha256": "f31a68f54389b468b0165c193172f934ad612b4e6cddff5e907b7304516da09d",
+      "bytes": 6155,
+      "sanitized": false
+    },
+    {
+      "path": "day19/html/day19_browser_reconnect.html",
+      "sha256": "8fdbeb148d08793799bab364fcaf784989c6af8ef3d5c727655584d91d0ab17a",
+      "bytes": 8838,
+      "sanitized": false
+    },
+    {
+      "path": "day19/html/day19_dom_stream.html",
+      "sha256": "c4cc62537beaa15246e71677a9636aee7b621c0d7d77af8ba4a8c35de30e77df",
+      "bytes": 5913,
+      "sanitized": false
+    },
+    {
+      "path": "day19/html/day19_final_browser_chat.html",
+      "sha256": "6217b2c13227ef6b4bcd852933627b2a5044667ac18aada328c8da1794488223",
+      "bytes": 1214,
+      "sanitized": false
+    },
+    {
+      "path": "day19/javascript/day19_final_browser_chat.js",
+      "sha256": "9c6f21b7940f465925510f75d58ac3267ce882fbac3dda3e149e9a7e20f1d11e",
+      "bytes": 7362,
+      "sanitized": false
+    },
+    {
+      "path": "day19/notes/LangChain-Day19-学习笔记.md",
+      "sha256": "79c82284b3610a0bf54acd7dcbf87048964e719165293e091acb4b278a39fa60",
+      "bytes": 16066,
+      "sanitized": false
+    },
+    {
+      "path": "day19/python/day19_browser_basic_server.py",
+      "sha256": "c6c8411afc329561b0f00f7ce69510fea018a632d23568e3b0e7cdd81af57fab",
+      "bytes": 2798,
+      "sanitized": false
+    },
+    {
+      "path": "day19/python/day19_browser_control_server.py",
+      "sha256": "e895a5bfb926adbf11ad31b3988701ca2d55b3dd0e4fb619836e5d9ce09e7c64",
+      "bytes": 8603,
+      "sanitized": false
+    },
+    {
+      "path": "day19/python/day19_browser_llm_server.py",
+      "sha256": "3e495f29a986e070e4045f94239f058925b4e4d823a61df9dac27d7c7a50fe48",
+      "bytes": 5676,
+      "sanitized": false
+    },
+    {
+      "path": "day19/python/day19_browser_reconnect_server.py",
+      "sha256": "1c784f2b8be7dfc7499a4d2331dd5eaa874285cc00d7333a23cc5056dbfe806a",
+      "bytes": 7381,
+      "sanitized": false
+    },
+    {
+      "path": "day19/python/day19_dom_stream_server.py",
+      "sha256": "9413eea556da4a8467ac5b5ffe4e8e681217bbb8a0f04aa775aef56103b765db",
+      "bytes": 4354,
+      "sanitized": false
+    },
+    {
+      "path": "day19/python/day19_final_browser_chat_server.py",
+      "sha256": "f0aac4cd02bbbc39f0abbee8cd3f9252d6afd884e76480e22e699eff547442f5",
+      "bytes": 11259,
+      "sanitized": false
+    },
+    {
+      "path": "day20/css/day20_final.css",
+      "sha256": "988a821178b1fce01ab548087d7a651477b8879ac2619859658be9deccd73c30",
+      "bytes": 1547,
+      "sanitized": false
+    },
+    {
+      "path": "day20/html/day20_final.html",
+      "sha256": "23030ca5ebbed60fab05b527f43a0fe9f172496fe29e7c4a136e0df13b538caa",
+      "bytes": 978,
+      "sanitized": false
+    },
+    {
+      "path": "day20/javascript/day20_final.js",
+      "sha256": "d451f086d12565b8f79f5157b8dcc5817897f105c16e60fd4e2f149c30301831",
+      "bytes": 4414,
+      "sanitized": false
+    },
+    {
+      "path": "day20/notes/LangChain-Day20-学习笔记.md",
+      "sha256": "198f139575d52bcccf984321f89901e8e02c5d42b00aab0dc8683ef35437c9e2",
+      "bytes": 14375,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_chat_repository.py",
+      "sha256": "064dd74f84503aa2ff27443827d2a5c904abd230960cc817561afe6cec16f401",
+      "bytes": 9936,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_final_repository.py",
+      "sha256": "02d9b1725889e83377363be9292c6f7f7151916c935cbe4e5873a55cd1b27ded",
+      "bytes": 6438,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_final_server.py",
+      "sha256": "cdb85e4990fabfd64c3dc470ed3f78f406a72d94ee05effbbf27b92b1affdf37",
+      "bytes": 9540,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_idempotency_demo.py",
+      "sha256": "a7b331a035e8844403946786749a970939fab1f2e90240a188de7116e7175335",
+      "bytes": 3566,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_multi_session_client.py",
+      "sha256": "1ea6f4a1c450801756a529aa2819c95bcb455750f59de1cd480d1ba91b0bb30f",
+      "bytes": 5731,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_multi_session_server.py",
+      "sha256": "fe440bfdaf3322268bb9257475b302e3e6e1c6c88835015acf3a71193a526e62",
+      "bytes": 9521,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_persistent_ws_client.py",
+      "sha256": "681b50448264177c8c6ed2009fe016651ee61c9a125f838b149bc186a692cc9e",
+      "bytes": 3439,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_persistent_ws_server.py",
+      "sha256": "22d874dfe63ff640874bdb455f41fc08b6495f668518b0fc2a85aa9b6f375583",
+      "bytes": 8058,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_repository_demo.py",
+      "sha256": "b8637a02680b72294ab49ee4186dace5debe406b1cdecdbc410097c287ccbd98",
+      "bytes": 2733,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_safe_repository.py",
+      "sha256": "4180b409e272f45fc777f2026bbdebe688e5613ca4049b9383c2a7becc09f854",
+      "bytes": 7587,
+      "sanitized": false
+    },
+    {
+      "path": "day20/python/day20_sqlite_basic.py",
+      "sha256": "67e5a93d8e479d1f6d8a98dff341d9144afb6e913a6ba61e7caba4e2caa2a69b",
+      "bytes": 6934,
+      "sanitized": false
+    },
+    {
+      "path": "day21/css/day21_final.css",
+      "sha256": "0d529f7a6443b85222c5d7be72bc81661cabae03505867c99c415084cd978705",
+      "bytes": 1310,
+      "sanitized": false
+    },
+    {
+      "path": "day21/documents/day21_sample.txt",
+      "sha256": "048d6961b825fcd518070a03d4a8de35a912e9ff5d05b5b4877e8fac70cfc9ac",
+      "bytes": 356,
+      "sanitized": false
+    },
+    {
+      "path": "day21/html/day21_browser_retrieval.html",
+      "sha256": "a39417cfd853fbf2bb467547f872a919ad9e2f36786d3737f3c4dbea58db0742",
+      "bytes": 3915,
+      "sanitized": false
+    },
+    {
+      "path": "day21/html/day21_final.html",
+      "sha256": "167f7a86adf6734d9e981a0b4c2ab66c4518a2537efb6a0ece5284443b27c428",
+      "bytes": 966,
+      "sanitized": false
+    },
+    {
+      "path": "day21/html/day21_upload_basic.html",
+      "sha256": "06b1ab9bbb9e8510624c8eafa6562280875ea1a0046af110ebcac681dfa221cc",
+      "bytes": 3162,
+      "sanitized": false
+    },
+    {
+      "path": "day21/html/day21_upload_validation.html",
+      "sha256": "bc049ad1262b8b0094809e1d53e07eb79a72470f132a3ec5f985aebc67629149",
+      "bytes": 2881,
+      "sanitized": false
+    },
+    {
+      "path": "day21/javascript/day21_final.js",
+      "sha256": "b2918c8b3d25f5f279b47bf30480d7d5bca834f5bede2658b004a02229cb7447",
+      "bytes": 3729,
+      "sanitized": false
+    },
+    {
+      "path": "day21/notes/LangChain-Day21-学习笔记.md",
+      "sha256": "54bca523354712533606b9be0e6f3e593cb49a2d0529ee9aab35d40b57306164",
+      "bytes": 10251,
+      "sanitized": false
+    },
+    {
+      "path": "day21/python/day21_browser_retrieval_server.py",
+      "sha256": "512b629f57d45a4cd9e998c76f13323b8043e6edb0e6e0d1aa4a48df9838fbde",
+      "bytes": 5156,
+      "sanitized": false
+    },
+    {
+      "path": "day21/python/day21_document_pipeline.py",
+      "sha256": "806172f5ff57c1e37e5cd932e2f52a48f6924993c8b730a47963cb5b2c9534f4",
+      "bytes": 5803,
+      "sanitized": false
+    },
+    {
+      "path": "day21/python/day21_final_server.py",
+      "sha256": "346a2b6d4def6c1fc434e19c8ed5b711f43fa59372531324fc1891055cc81355",
+      "bytes": 10446,
+      "sanitized": false
+    },
+    {
+      "path": "day21/python/day21_upload_basic_server.py",
+      "sha256": "f8f756beff30196a63d3ca96d386ca8160e356cd8bef79ba99281137c4e605bc",
+      "bytes": 4402,
+      "sanitized": false
+    },
+    {
+      "path": "day21/python/day21_upload_validation_server.py",
+      "sha256": "12716259cc5326535a188f2bbc18a131efacf12297089dd09d2a824dd5be826c",
+      "bytes": 6379,
+      "sanitized": false
+    },
+    {
+      "path": "day21/python/day21_vector_index.py",
+      "sha256": "2837e7d55bc3ddb172c0492c5a0645602600b9f1c8bcaf9ba74881c8ec3feb25",
+      "bytes": 9462,
+      "sanitized": false
+    },
+    {
+      "path": "day22/css/day22_final.css",
+      "sha256": "423c8532ee0986571870a379dd4bd2b95b7edce185cd07b85204aede63c294d6",
+      "bytes": 2836,
+      "sanitized": false
+    },
+    {
+      "path": "day22/html/day22_final.html",
+      "sha256": "958be673668a24bd792a163ecf7204715c8357e2e0173628eb9ad00f5db8e395",
+      "bytes": 2287,
+      "sanitized": false
+    },
+    {
+      "path": "day22/javascript/day22_final.js",
+      "sha256": "a26a8f60fa9b92660d49dbc95e33d925c1068931ec68a29ffea15bc6c0c118dd",
+      "bytes": 7314,
+      "sanitized": false
+    },
+    {
+      "path": "day22/notes/Day22-最终代码详细解读.md",
+      "sha256": "a56bf9ab07cb6e408c34a835ced8611ed1cfd0efff74ea75040b6e8e8b09059c",
+      "bytes": 8430,
+      "sanitized": false
+    },
+    {
+      "path": "day22/notes/LangChain-Day22-学习笔记.md",
+      "sha256": "56c69796fabb1151d86fa68ab4fa31789c65c50e8ec019c437b346e11ffca2ff",
+      "bytes": 7842,
+      "sanitized": false
+    },
+    {
+      "path": "day22/python/day22_final_hybrid_rag.py",
+      "sha256": "d85c24d3ce9d309d0652993797e70e71fb6f11a81f3cd152251332e495350633",
+      "bytes": 16536,
+      "sanitized": false
+    },
+    {
+      "path": "day22/python/day22_fts_basic.py",
+      "sha256": "5d3e1a2e7dd08d4d24c1007397a344ea27687e245f5094306670c2d9eed86d4a",
+      "bytes": 5958,
+      "sanitized": false
+    },
+    {
+      "path": "day22/python/day22_llm_reranker.py",
+      "sha256": "26a659066fb7031b6d103b2cbf6991b608db79b28d10ee06361f4d4bce834078",
+      "bytes": 7403,
+      "sanitized": false
+    },
+    {
+      "path": "day22/python/day22_retrieval_compare.py",
+      "sha256": "bbd0daee73c349063259f3cb0eb5fa84ffae92178725b0afbbeee5f5cf68fd40",
+      "bytes": 5648,
+      "sanitized": false
+    },
+    {
+      "path": "day22/python/day22_retrieval_evaluation.py",
+      "sha256": "4819bcb5ef75242874e61904bb8dcfcd2fb2911bb246a62aa411d8bd88efba61",
+      "bytes": 6883,
+      "sanitized": false
+    },
+    {
+      "path": "day22/python/day22_rrf_fusion.py",
+      "sha256": "79338f5d5dbfe7028af39d4ace17238a7bd6057d3638f60077c8d6f4af898abc",
+      "bytes": 5362,
+      "sanitized": false
+    },
+    {
+      "path": "day23/css/day23_final.css",
+      "sha256": "a864f5dda8725226ebef63d9a554930fd3303066edb53675a095848b3b17a541",
+      "bytes": 2955,
+      "sanitized": false
+    },
+    {
+      "path": "day23/html/day23_final.html",
+      "sha256": "86d0774956515781ef57f6a4696e0ab2593e5c8093ed58b590b7bae494b527f0",
+      "bytes": 2102,
+      "sanitized": false
+    },
+    {
+      "path": "day23/javascript/day23_final.js",
+      "sha256": "bb4504751b40555419978bc9fe385d7b1827ae01390b5fa1f9177482fa63186b",
+      "bytes": 8691,
+      "sanitized": false
+    },
+    {
+      "path": "day23/notes/Day23-最终代码详细解读.md",
+      "sha256": "5396cd12d8842dc4ed05a92479907b7baf77487c2722aecd4d7c63410f6940a7",
+      "bytes": 9401,
+      "sanitized": false
+    },
+    {
+      "path": "day23/notes/LangChain-Day23-学习笔记.md",
+      "sha256": "d5752d49c2483742616ae03281f5fb03c61a4821d042b37772b086c6394d7bae",
+      "bytes": 9680,
+      "sanitized": false
+    },
+    {
+      "path": "day23/python/day23_answer_quality.py",
+      "sha256": "8f7c4ed700d7e39cd756f2b9f3774622684426d34e1f4445e6417f7c9bddf177",
+      "bytes": 10533,
+      "sanitized": false
+    },
+    {
+      "path": "day23/python/day23_answer_repair.py",
+      "sha256": "dadbec7d42732817f67c1a24381b45d7a1d95de25a2c120bad319226f7f671a3",
+      "bytes": 11357,
+      "sanitized": false
+    },
+    {
+      "path": "day23/python/day23_citation_audit.py",
+      "sha256": "83150e3039147ef4bc5b8f62ffd7dc3f0fb2a959b2771ec15522983ef3fe77b4",
+      "bytes": 8651,
+      "sanitized": false
+    },
+    {
+      "path": "day23/python/day23_claim_groundedness.py",
+      "sha256": "071f4df45eaef940453ea13097a6e5c450a33fa5c5d581ae0cc5de6c118a71bc",
+      "bytes": 10721,
+      "sanitized": false
+    },
+    {
+      "path": "day23/python/day23_final_audited_rag.py",
+      "sha256": "c14548c5295c7a21aa229849e41897217e81b8f7c9e4140abd8730b2d6a5c694",
+      "bytes": 13620,
+      "sanitized": false
+    },
+    {
+      "path": "day23/python/day23_structured_citations.py",
+      "sha256": "cbe511369ba8542f67cb695528720e1f1313573d8c0946615f28112d4f9be820",
+      "bytes": 7419,
+      "sanitized": false
+    },
+    {
+      "path": "day24/css/day24_final.css",
+      "sha256": "9fb7d60def30afd8857d4d2394c4f9db55319213376166f29f999102fb19ed83",
+      "bytes": 2782,
+      "sanitized": false
+    },
+    {
+      "path": "day24/html/day24_final.html",
+      "sha256": "972fc791b5a0127e42be66370025757da0bc36bd59500e328c0da9e98b2599c0",
+      "bytes": 2264,
+      "sanitized": false
+    },
+    {
+      "path": "day24/javascript/day24_final.js",
+      "sha256": "34fe174817cc31e236f3012a22b97f7c4b9aafe089d8b3e80de00ba315bb0223",
+      "bytes": 6104,
+      "sanitized": false
+    },
+    {
+      "path": "day24/notes/Day24-最终代码详细解读.md",
+      "sha256": "19b6461b5ec09c2a63828d08621eab08263281d4eb0f8cd112d6851b88ec3d9b",
+      "bytes": 8132,
+      "sanitized": false
+    },
+    {
+      "path": "day24/notes/LangChain-Day24-学习笔记.md",
+      "sha256": "2e47b9c6bb49590d0fcd74f682cba7a488495d7b1a9d86cf33fe203c965b20e8",
+      "bytes": 9128,
+      "sanitized": false
+    },
+    {
+      "path": "day24/python/day24_adaptive_audit.py",
+      "sha256": "f155b355625fb5a253c3e26f4989b22716fed09d36e142154f4a0207ab4831ab",
+      "bytes": 11680,
+      "sanitized": false
+    },
+    {
+      "path": "day24/python/day24_budget_controller.py",
+      "sha256": "fdd1cb2119fbfd13e16139ad3946137d07b5d336bb8bbd1b43288824488b6b3e",
+      "bytes": 14116,
+      "sanitized": false
+    },
+    {
+      "path": "day24/python/day24_final_optimized_rag.py",
+      "sha256": "fa6d44eea0c4aa413bca1cf00bd7932f7060d497c0ffcb27d00075006126b0c4",
+      "bytes": 18197,
+      "sanitized": false
+    },
+    {
+      "path": "day24/python/day24_parallel_evaluators.py",
+      "sha256": "f85773b19f677ac00f4764b459807115b47a87253da8984bdab0b4f6cb1dbef2",
+      "bytes": 9146,
+      "sanitized": false
+    },
+    {
+      "path": "day24/python/day24_pipeline_cache.py",
+      "sha256": "d1da80ad6810edfe7dd24c61c681fa243fe673799b2deeaaeb074b927db34418",
+      "bytes": 13230,
+      "sanitized": false
+    },
+    {
+      "path": "day24/python/day24_pipeline_metrics.py",
+      "sha256": "04f3550b9b05bfa2b0d8346c1de1355cbacab95a0ec1f4398134123dd822cfe0",
+      "bytes": 10161,
+      "sanitized": false
+    },
+    {
+      "path": "day25/css/day25_final.css",
+      "sha256": "1ffee5721595ddac54be73c1d9ba3ac0d01c6ce1e32c1c0046678a9c0a692258",
+      "bytes": 731,
+      "sanitized": false
+    },
+    {
+      "path": "day25/html/day25_final.html",
+      "sha256": "dc4cc16995a0e1fc97a37429b2076dd11dc56a9d3f88b000aa7191e953a4ae5d",
+      "bytes": 3386,
+      "sanitized": false
+    },
+    {
+      "path": "day25/javascript/day25_final.js",
+      "sha256": "fc6e9b6819c3f67e8b224ea808f063cf248290944eb0b5299e502fef3574b4fa",
+      "bytes": 9929,
+      "sanitized": false
+    },
+    {
+      "path": "day25/notes/Day25-最终代码详细解读.md",
+      "sha256": "e8df10a1491437277cc50fc900aacafaaf7d998bb99458e2322e30c271090006",
+      "bytes": 10905,
+      "sanitized": false
+    },
+    {
+      "path": "day25/notes/LangChain-Day25-学习笔记.md",
+      "sha256": "23c1823fa5105a4543db432b655b4cf22c6bba3c8dbc39989f4d763ba0f0fe9d",
+      "bytes": 7985,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_feedback_api.py",
+      "sha256": "dffbf61d40f4d61676c9c083caa4553ebdddd59e077e7c770f5622cdc4133242",
+      "bytes": 8319,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_feedback_api_client.py",
+      "sha256": "c965297f23577d2dbfdd8969972f9da48c6fec9e0499205189f1e94f59607561",
+      "bytes": 3552,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_feedback_linkage.py",
+      "sha256": "f1ac4371f42ff9dc804f0aa0acbc47b4240d48c958c29649379d5f04145fc29e",
+      "bytes": 14227,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_feedback_store.py",
+      "sha256": "21ac7c3d05efd2b0d6bdc5427f12173fe0c9d9e47fa8a6214f411130ee357be4",
+      "bytes": 9243,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_feedback_to_evalset.py",
+      "sha256": "21f57ea801f6cc2d284026ca7b6f8418885f7498ae679cf07d7e16ebf45f86b3",
+      "bytes": 11927,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_final_feedback_rag.py",
+      "sha256": "8cf4dabb1d1081487c4d50c63489ae87a73ed4908fc2ef17f08f3924f39a7ebb",
+      "bytes": 14307,
+      "sanitized": false
+    },
+    {
+      "path": "day25/python/day25_offline_replay.py",
+      "sha256": "b51aafbc64694901658274060d275f9682862a8986f7dc958e302b307dbf7418",
+      "bytes": 14860,
+      "sanitized": false
+    },
+    {
+      "path": "day26/css/day26_final.css",
+      "sha256": "f891371dcd9f861a6eb4afe795142c3f7d26250d47f41df0915d1d6d8ff3cfb7",
+      "bytes": 440,
+      "sanitized": false
+    },
+    {
+      "path": "day26/html/day26_final.html",
+      "sha256": "6ce213c9ca915c0e59f82e4dfaea80bc3b0d59506b9ab1cd00a7e36e2c8be964",
+      "bytes": 2753,
+      "sanitized": false
+    },
+    {
+      "path": "day26/javascript/day26_final.js",
+      "sha256": "c2d43a73858f2ad790962ac272d96a427b939f7ad841f75b0987c369e38d3caf",
+      "bytes": 6907,
+      "sanitized": false
+    },
+    {
+      "path": "day26/notes/Day26-最终代码详细解读.md",
+      "sha256": "258927a2b3cf0bff2061505736e5c5532c8056471760ab2756fc27acc9502156",
+      "bytes": 10415,
+      "sanitized": false
+    },
+    {
+      "path": "day26/notes/LangChain-Day26-学习笔记.md",
+      "sha256": "cb18b38d8df8ce7e3c41377948793c179d62668eb77aa4aec7604bc776273dc1",
+      "bytes": 8277,
+      "sanitized": false
+    },
+    {
+      "path": "day26/python/day26_ab_metrics.py",
+      "sha256": "1cf174fa5805b98537fb5913893a4128107e3c8324c403d382e4ed679f032310",
+      "bytes": 13411,
+      "sanitized": false
+    },
+    {
+      "path": "day26/python/day26_exposure_events.py",
+      "sha256": "0a57b9fe01290c2b8e6451c57cc04e9193a21c192786b9c637f9b9c51a57472d",
+      "bytes": 13281,
+      "sanitized": false
+    },
+    {
+      "path": "day26/python/day26_final_canary_rag.py",
+      "sha256": "7497722c15004100841d6d84a2e2459021ae2d462524567ced073d8c2956b715",
+      "bytes": 18026,
+      "sanitized": false
+    },
+    {
+      "path": "day26/python/day26_guardrails.py",
+      "sha256": "125b56e3d032ab2c0d218efde1f900f5e3bb160a7d7c91c73aa52a07aa43d11c",
+      "bytes": 13319,
+      "sanitized": false
+    },
+    {
+      "path": "day26/python/day26_stable_assignment.py",
+      "sha256": "72f3b41b15afde208d9080d3427705ffda18cc4c1442dbb258a7a07688a62dfa",
+      "bytes": 11125,
+      "sanitized": false
+    },
+    {
+      "path": "day26/python/day26_variant_config.py",
+      "sha256": "d6d190ccb4aa55f62226233e2561209de3041e653a1a216a4621e6b2aed54d6a",
+      "bytes": 10533,
+      "sanitized": false
+    },
+    {
+      "path": "day27/css/day27_final.css",
+      "sha256": "35d34e35aae715d4067635bdcdab08beb3fccc8bf21553d66d1f1fe3c282c404",
+      "bytes": 2539,
+      "sanitized": false
+    },
+    {
+      "path": "day27/html/day27_final.html",
+      "sha256": "7bba70c328efead7605164aa39d08c7ae10634c2542b13aa897614f6e8084197",
+      "bytes": 1470,
+      "sanitized": false
+    },
+    {
+      "path": "day27/javascript/day27_final.js",
+      "sha256": "6a666497f4acef6069fe4c99ff5f91c8653021ba526fa2590b53dd7d83c3f6de",
+      "bytes": 4243,
+      "sanitized": false
+    },
+    {
+      "path": "day27/notes/Day27-最终代码详细解读.md",
+      "sha256": "ca101c54581cd7f51c1cfee61ad38a30ac52b72ee3a7875a244d664e9b978963",
+      "bytes": 12547,
+      "sanitized": false
+    },
+    {
+      "path": "day27/notes/LangChain-Day27-学习笔记.md",
+      "sha256": "381c6337aae0a281590c04f7888a654831b5722719386c182b10113946f60130",
+      "bytes": 7432,
+      "sanitized": false
+    },
+    {
+      "path": "day27/python/day27_alert_manager.py",
+      "sha256": "1aed33fdddbebb705f260c30f81ca3e61de71ab41fe63489f6f5404f6ba389e7",
+      "bytes": 14989,
+      "sanitized": false
+    },
+    {
+      "path": "day27/python/day27_auto_rollback.py",
+      "sha256": "2b32f271e43df6a35442f035247692dbefb07b52ddd5d1cbd9150bc56af02b0e",
+      "bytes": 16943,
+      "sanitized": false
+    },
+    {
+      "path": "day27/python/day27_burn_rate.py",
+      "sha256": "672c7ebbe62ec11cb038edbaaf074ebe8d3d41b2c8a1d0e5ba82b3ffbdf28f99",
+      "bytes": 10296,
+      "sanitized": false
+    },
+    {
+      "path": "day27/python/day27_final_ops_dashboard.py",
+      "sha256": "5a7ea3d7805807e7ed21a73ce751294d00a55b25c4f7c9c9514ab5f1937a4d22",
+      "bytes": 11082,
+      "sanitized": false
+    },
+    {
+      "path": "day27/python/day27_incident_lifecycle.py",
+      "sha256": "c853dcb0c0cb7f39f6df4869636a04f890e87ecb2a5e43fbcc50a917bf2dbd2b",
+      "bytes": 15385,
+      "sanitized": false
+    },
+    {
+      "path": "day27/python/day27_slo_basic.py",
+      "sha256": "c26e904267a3c7ec7da74537f94dad3629001a3104275f1a68559bd54c409a64",
+      "bytes": 12370,
+      "sanitized": false
+    },
+    {
+      "path": "day28/css/day28_final.css",
+      "sha256": "e93a65be3528b486418ca50884d77769042ae6688bb2c8cfb36fa10036cb4848",
+      "bytes": 5134,
+      "sanitized": false
+    },
+    {
+      "path": "day28/html/day28_final.html",
+      "sha256": "0dfbcb5c1db3371c97707143c753ad1ed0ff6a072114f71e5fd94d13c02685f9",
+      "bytes": 2066,
+      "sanitized": false
+    },
+    {
+      "path": "day28/javascript/day28_final.js",
+      "sha256": "6a8aa745e5ffd6b72e795a07481fece8a61fa8967bc0916a601f8df4859ae1b3",
+      "bytes": 6318,
+      "sanitized": false
+    },
+    {
+      "path": "day28/notes/Day28-最终代码详细解读.md",
+      "sha256": "99b1f13d978d65b210887a50eb9ce788b0d679a4cfdacc1aec24b45d3b36a9f9",
+      "bytes": 10203,
+      "sanitized": false
+    },
+    {
+      "path": "day28/notes/LangChain-Day28-学习笔记.md",
+      "sha256": "06b8910970589dd5f097044aebb8849f1a952aa724b8804be8f2b75002f1e3e8",
+      "bytes": 7674,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_async_context.py",
+      "sha256": "66aacae67a2f66e301c2f499a829e6bd105fe92fe98c6d5ce82858d9497a187e",
+      "bytes": 9319,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_final_observability_dashboard.py",
+      "sha256": "bdaf4fff585621b6a8caf7e989bccd9f796680dc007f926c7cf80dd3508970da",
+      "bytes": 7203,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_http_tracing_client.py",
+      "sha256": "d0f313e9ee17d6f16ce7af4568ef2d7841ee4288bf691b232e158381cdd8c7d9",
+      "bytes": 3928,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_http_tracing_server.py",
+      "sha256": "49e7a9c470f0bf2a1a790005b510d7253e28fdf7721f272d674ca7200fea9473",
+      "bytes": 7617,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_rag_stage_tracing.py",
+      "sha256": "8a6935b1c1bd6d886ecdd27dab2b7c2564c59e7a10e420fddc88b42af8d0f0fd",
+      "bytes": 15014,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_structured_logging.py",
+      "sha256": "a163389a6acf129a861756e4dc21344935d3c3c455807191099b7cc6f352e666",
+      "bytes": 8922,
+      "sanitized": false
+    },
+    {
+      "path": "day28/python/day28_trace_spans.py",
+      "sha256": "9315fa65b7bb2898cd44f502a458fe487bd6568a0c1e05a9598a45c10254cff0",
+      "bytes": 12584,
+      "sanitized": false
+    },
+    {
+      "path": "day29/css/day29_final.css",
+      "sha256": "5853c5528a9ad5bb574429268a82c4f9f9be1e754f47f025c884585fbfa0f6e6",
+      "bytes": 2118,
+      "sanitized": false
+    },
+    {
+      "path": "day29/html/day29_final.html",
+      "sha256": "cdd30a3579419ed58b2a4ddf86aa0d965b5503fac8f645c28af6127324143a08",
+      "bytes": 1179,
+      "sanitized": false
+    },
+    {
+      "path": "day29/javascript/day29_final.js",
+      "sha256": "583ba1c8b831216ffe437610eb41ee9f5280ff7a6315dd0244c88d1d8dfedcc2",
+      "bytes": 2801,
+      "sanitized": false
+    },
+    {
+      "path": "day29/notes/Day29-最终代码详细解读.md",
+      "sha256": "90e79cccd41b50f5be36d3f8c11e9ce3e47c186dadd3ad8b543be784f1691fa5",
+      "bytes": 6943,
+      "sanitized": false
+    },
+    {
+      "path": "day29/notes/LangChain-Day29-学习笔记.md",
+      "sha256": "e4713c36c2f0958ec7b28cafb2130f0c0021cc15ccf2281b58e71079810471e3",
+      "bytes": 5201,
+      "sanitized": false
+    },
+    {
+      "path": "day29/python/day29_batch_exporter.py",
+      "sha256": "c20cf8fcb7afb6c51859dfa0a3a508b9f35ca2916f9ae41491ac46e5c69d16c1",
+      "bytes": 10005,
+      "sanitized": false
+    },
+    {
+      "path": "day29/python/day29_final_telemetry_service.py",
+      "sha256": "7a2761433e9b9653cc6ef5cc11ef776bf8bc6c262143e1d05946263d920b2d9b",
+      "bytes": 13903,
+      "sanitized": false
+    },
+    {
+      "path": "day29/python/day29_sampling_strategies.py",
+      "sha256": "01efc1e82e933bc2e8c1b619af3f688a7d8df3d210227a37b66dd191ddfadb48",
+      "bytes": 9923,
+      "sanitized": false
+    },
+    {
+      "path": "day29/python/day29_span_semantics.py",
+      "sha256": "34e1aaf5a371625c6774977fb64c7047dd3592016a34967ee3001d60d6a8756b",
+      "bytes": 13172,
+      "sanitized": false
+    },
+    {
+      "path": "day29/python/day29_telemetry_governance.py",
+      "sha256": "8ace59f64d057c5e01028c63befde88d66e6de97ec457678843b71a426c78297",
+      "bytes": 13642,
+      "sanitized": true
+    },
+    {
+      "path": "day29/python/day29_traceparent_basic.py",
+      "sha256": "0e7db4fbba89f9e46a3bc907f7dee1b8eb43be8762680886b5e0d82a1a1e3998",
+      "bytes": 7709,
+      "sanitized": false
+    },
+    {
+      "path": "day30/config/.env.example",
+      "sha256": "0174710edee593ba1c981c0707c0809cb7ffc0431e637106783ac62931f85a28",
+      "bytes": 409,
+      "sanitized": false
+    },
+    {
+      "path": "day30/config/app.json",
+      "sha256": "ce6b24dc176d7566a0f78d93d37b02d03b1d1d34539b91c6475ff0c47af8f336",
+      "bytes": 221,
+      "sanitized": false
+    },
+    {
+      "path": "day30/notes/Day30-最终代码详细解读.md",
+      "sha256": "e4f121ef5ee672ef9e3b28e9ae46f0f008b52aa8bcce2fd4ba91e70106aab3cd",
+      "bytes": 12177,
+      "sanitized": false
+    },
+    {
+      "path": "day30/notes/LangChain-Day30-学习笔记.md",
+      "sha256": "681ffcfd07bb802f1506a60af40ab28356b661dc5049d461214f002404e03354",
+      "bytes": 9578,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_config_management.py",
+      "sha256": "3c7808217a6ef2612b75c8b538ee75efec41fda02b5eb7dc70953687258326a6",
+      "bytes": 10679,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_database_backup.py",
+      "sha256": "309195ba9a29d95d93f5d730f05625fe86005b30befe3c0b31bb32898f949bbb",
+      "bytes": 11356,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_database_migrations.py",
+      "sha256": "97190084b711d62460a80ac2967925bb292caaf8db7c3208e46880ab521447ff",
+      "bytes": 11937,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_health_checks.py",
+      "sha256": "7036f0c7522fd5f8d8f4f5013fb25b44a6a528807ca44ab2908556a010dc1b81",
+      "bytes": 9796,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_production_rag_client.py",
+      "sha256": "6c89e7cea1a2042ee509203fa48e8accbc30b1a0289f223f3fed8e98c4bc7aab",
+      "bytes": 3291,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_production_rag_service.py",
+      "sha256": "5a11364415e2068271b403356c31b9bdda391094b7752aa6dc60983f2270982e",
+      "bytes": 16813,
+      "sanitized": false
+    },
+    {
+      "path": "day30/python/day30_release_preflight.py",
+      "sha256": "7245bba5816f470ddcd917e145a31763520e2a19efc7a6dba688d98a0ec263ce",
+      "bytes": 11296,
+      "sanitized": false
+    },
+    {
+      "path": "day31/notes/Day31-最终代码详细解读.md",
+      "sha256": "f58865bf8860550082bb95b2d9979bd349dd758c97261b1d8f4384d0b20e200b",
+      "bytes": 12211,
+      "sanitized": false
+    },
+    {
+      "path": "day31/notes/LangChain-Day31-学习笔记.md",
+      "sha256": "fed0ef5cb7e6ac2336fa6ad673c03f91e5e75fafc42ed9396c04c94dd67734e0",
+      "bytes": 11629,
+      "sanitized": false
+    },
+    {
+      "path": "day31/python/day31_api_contract_tests.py",
+      "sha256": "63e60cb04c24dc69ab9c902c2ff4af64c08f3a525d2757f645ad6bb648df09ea",
+      "bytes": 9718,
+      "sanitized": false
+    },
+    {
+      "path": "day31/python/day31_ci_cd_pipeline.py",
+      "sha256": "3d54066165d9e313b29fe1d0da94d8668136be920c3183c601f0e24fe8f921d9",
+      "bytes": 14669,
+      "sanitized": false
+    },
+    {
+      "path": "day31/python/day31_fake_integration_tests.py",
+      "sha256": "cebe457c203a476651a2689d5fe5f515fd683ddebff2590ab05535a076c353ae",
+      "bytes": 10618,
+      "sanitized": false
+    },
+    {
+      "path": "day31/python/day31_load_slo_test.py",
+      "sha256": "ba523adfa4f97f3013488fa8bd763c1f2718caeecd8c21e0da728bb748216af8",
+      "bytes": 13160,
+      "sanitized": false
+    },
+    {
+      "path": "day31/python/day31_quality_gate.py",
+      "sha256": "888b8213f01d7a2c06a501da993e72be39c7d35bba8dab5125b4e6194b912f77",
+      "bytes": 10008,
+      "sanitized": false
+    },
+    {
+      "path": "day31/python/day31_release_artifact.py",
+      "sha256": "8533d13eaa181ab677b2d5888c676eb45964bf3968825d990e10c11756f9aa54",
+      "bytes": 14588,
+      "sanitized": false
+    },
+    {
+      "path": "day32/.gitignore",
+      "sha256": "8e7bd90ded05af1aaf44bc1f1b17a664daf6b3bb261cd5f973af1f8d48e915ce",
+      "bytes": 76,
+      "sanitized": false
+    },
+    {
+      "path": "day32/config/release_trust.json",
+      "sha256": "fe9c0fe4d4815cbebb3946442284e6f531b0390cd84a6c09169205ae06e7ff67",
+      "bytes": 151,
+      "sanitized": false
+    },
+    {
+      "path": "day32/notes/Day32-最终代码详细解读.md",
+      "sha256": "9f212246ba769d1aa73cd1dab2e1e0fa400e75de38cea4adabbcf678a3f98063",
+      "bytes": 9609,
+      "sanitized": false
+    },
+    {
+      "path": "day32/notes/LangChain-Day32-学习笔记.md",
+      "sha256": "56f5f4ac61d04d16cde7e1bbf68f5dfcac0af3eded4e7df18910636529c6a6a3",
+      "bytes": 6670,
+      "sanitized": false
+    },
+    {
+      "path": "day32/python/day32_dependency_scan.py",
+      "sha256": "ef72cc01aec5eb80af9e5407adebb91e408d82f1b85768739b5ee4244f9b8e08",
+      "bytes": 6806,
+      "sanitized": false
+    },
+    {
+      "path": "day32/python/day32_ed25519_artifact.py",
+      "sha256": "bef97a3a74c03b569a6f8bd8a057a59ede9fc0b6e3cc1cc6571f23128693ff5b",
+      "bytes": 8854,
+      "sanitized": false
+    },
+    {
+      "path": "day32/python/day32_hmac_artifact.py",
+      "sha256": "c503c8571dd2e67dd54c8eeebf1d91b97c5804ffab909c9f705aee5b59d8192f",
+      "bytes": 6807,
+      "sanitized": false
+    },
+    {
+      "path": "day32/python/day32_sbom_basic.py",
+      "sha256": "544a429feec6d748485bb8e0a2eb68d32998ea16281cbf6d12aa154fdde5a57c",
+      "bytes": 7191,
+      "sanitized": false
+    },
+    {
+      "path": "day32/python/day32_signature_gate.py",
+      "sha256": "1b57ef2a324f3af90527750980819c2963c3d6e06d86fb27271acdd006911c70",
+      "bytes": 5054,
+      "sanitized": false
+    },
+    {
+      "path": "day32/python/day32_supply_chain_pipeline.py",
+      "sha256": "eac8b2a2df4e8a82d60e0ecd339387676e0cbdff1a83e63097342891c32dfa93",
+      "bytes": 7341,
+      "sanitized": false
+    },
+    {
+      "path": "day33/notes/Day33-最终代码详细解读.md",
+      "sha256": "29cf0fc8d499612472379817c045fc43698ab1bf3956a951860f87b9d3c191e1",
+      "bytes": 9786,
+      "sanitized": false
+    },
+    {
+      "path": "day33/notes/LangChain-Day33-学习笔记.md",
+      "sha256": "bf3d0fe1fe4cc7bf118539c61a3c9d291c0355b8009c54d065639610748476fa",
+      "bytes": 5670,
+      "sanitized": false
+    },
+    {
+      "path": "day33/notes/毕业项目范围与三日计划.md",
+      "sha256": "09b387427ca2500133a4e7eae5072429a919771011c5f53773d4c2e2db439ce6",
+      "bytes": 1815,
+      "sanitized": false
+    },
+    {
+      "path": "day33/python/day33_graph_basic.py",
+      "sha256": "f3e26fb4d7e42c67870e822b595cf2662b8d1042fbe2a333a5e7419fdfa2caae",
+      "bytes": 5627,
+      "sanitized": false
+    },
+    {
+      "path": "day33/python/day33_knowledge_agent.py",
+      "sha256": "f152c4661384eb3e09db463b623c47a29188f96909c38a1330e5b40885e794a7",
+      "bytes": 9387,
+      "sanitized": false
+    },
+    {
+      "path": "day33/python/day33_learning_assistant.py",
+      "sha256": "eb4c4aba57d034f63280438bad8d428c9c2641843ac439f82d08c46a7e3b4957",
+      "bytes": 8312,
+      "sanitized": false
+    },
+    {
+      "path": "day33/python/day33_persistent_agent.py",
+      "sha256": "38f9ad35e06fb223f77458a276b52a1704d37d401271375091233575b224ed29",
+      "bytes": 10842,
+      "sanitized": false
+    },
+    {
+      "path": "day33/python/day33_project_contract.py",
+      "sha256": "e13ed5805dc8f9b6b7fd40c45153494f515e4aca998588c9924da56fe236ac4d",
+      "bytes": 4964,
+      "sanitized": false
+    },
+    {
+      "path": "day33/python/day33_tool_agent.py",
+      "sha256": "cb8ecca515bf51128731412c57a657f198fb5fed27af4933f05172b9fb07bd96",
+      "bytes": 7014,
+      "sanitized": false
+    },
+    {
+      "path": "day34/notes/Day34-最终代码详细解读.md",
+      "sha256": "639bbe1dff601677a179c0ec61ac9e9549a76154cce7386eec53415c644c55cb",
+      "bytes": 11263,
+      "sanitized": false
+    },
+    {
+      "path": "day34/notes/LangChain-Day34-学习笔记.md",
+      "sha256": "08392b775c899d9066f08c4b275e7876178ddb342bb8197cc4155ee6b29dd8b0",
+      "bytes": 6389,
+      "sanitized": false
+    },
+    {
+      "path": "day34/python/day34_guarded_operations.py",
+      "sha256": "c09eb025cc854ba70a81fe34bc551659bf5f605f35b8cd9d6188f2e6912365f3",
+      "bytes": 10561,
+      "sanitized": false
+    },
+    {
+      "path": "day34/python/day34_learning_assistant.py",
+      "sha256": "94ad762eea66c8c48a019319910ba1434bde765c29ad6781f132057dfe797091",
+      "bytes": 14136,
+      "sanitized": false
+    },
+    {
+      "path": "day34/python/day34_note_contract.py",
+      "sha256": "9c4602dce053ffe62ebad8fe1be2fc745d54048153f708e3ac9cac16b9896216",
+      "bytes": 5808,
+      "sanitized": false
+    },
+    {
+      "path": "day34/python/day34_note_interrupt.py",
+      "sha256": "baae73e1ee3a4dc3b08343de6b5c94fca424073fa4b441bd1e38dd3af256e08a",
+      "bytes": 9245,
+      "sanitized": false
+    },
+    {
+      "path": "day34/python/day34_note_writer.py",
+      "sha256": "7be60e50dabfafe59a31977c80cb184789f105bb505e6ae098946dc8452f3c6b",
+      "bytes": 9829,
+      "sanitized": false
+    },
+    {
+      "path": "day34/python/day34_session_checks.py",
+      "sha256": "30e8a68b3a94d059496abb2381fa5ca5c910512e2dfb0af38143ef209867fa82",
+      "bytes": 8146,
+      "sanitized": false
+    },
+    {
+      "path": "day35/.gitignore",
+      "sha256": "59e2f0163125a2c04927b39d28941fa8c0842528028500020fb92d2a9bda8194",
+      "bytes": 80,
+      "sanitized": false
+    },
+    {
+      "path": "day35/README.md",
+      "sha256": "012b86660e9afff8536b9d0464baef2fdfa1c509dc236fe041de237ffbb84513",
+      "bytes": 6582,
+      "sanitized": true
+    },
+    {
+      "path": "day35/config/.env.example",
+      "sha256": "f3b558b7b4efff1363c2adbc6b6f0e758d52cebe7d2aab56d74e7631fefefcf4",
+      "bytes": 267,
+      "sanitized": false
+    },
+    {
+      "path": "day35/evaluation/acceptance_plan.json",
+      "sha256": "66a1de2aff15a83c3d382bba5f0fb54d43bfc2c6d0052d8e6ecbe9da1e7ee846",
+      "bytes": 6318,
+      "sanitized": false
+    },
+    {
+      "path": "day35/notes/Day35-最终代码详细解读.md",
+      "sha256": "e6c9df0dc9331dcd93d490a720011e055069c2216e9ed29aef413c7f11a02724",
+      "bytes": 10803,
+      "sanitized": false
+    },
+    {
+      "path": "day35/notes/Day35-独立讲解与查漏补缺.md",
+      "sha256": "ca8138827f6aaf93c49e48d01049a8f85c951271c370475568488a9c804c546a",
+      "bytes": 2296,
+      "sanitized": false
+    },
+    {
+      "path": "day35/notes/Day35-验收安排.md",
+      "sha256": "c9a841b5e460e87871a37b242bf24ca5479c9874b8fd4b866d4f745c5ee15147",
+      "bytes": 1344,
+      "sanitized": false
+    },
+    {
+      "path": "day35/notes/LangChain-Day35-学习笔记与课程总结.md",
+      "sha256": "1c403368d1ddc782503c83e2dd2b32902586797311531560cac7b61846ddeba1",
+      "bytes": 5330,
+      "sanitized": false
+    },
+    {
+      "path": "day35/python/day35_acceptance_plan.py",
+      "sha256": "61b1cc9a8128cb001423b3a099c453f6329b92e421a9418bbabb2290ab98310d",
+      "bytes": 6941,
+      "sanitized": false
+    },
+    {
+      "path": "day35/python/day35_explain_project.py",
+      "sha256": "39428973932a299af68cc17b27a4758b8fbe68e455ffb59a419354f23ee59045",
+      "bytes": 6121,
+      "sanitized": false
+    },
+    {
+      "path": "day35/python/day35_fake_acceptance.py",
+      "sha256": "07a22c01d383a8558ea59185e2d291dd29f847ddff2f74dfa1fbeb5efafa0892",
+      "bytes": 14385,
+      "sanitized": false
+    },
+    {
+      "path": "day35/python/day35_final_assistant.py",
+      "sha256": "179868495b834e2528d638160e9f75ad08e1b4ebfe5951bdd542e0b76bc2dbbd",
+      "bytes": 519,
+      "sanitized": false
+    },
+    {
+      "path": "day35/python/day35_live_acceptance.py",
+      "sha256": "90fe54c91670e67d78d6094d9f4376843a613eb6ae4f30e0e0286ff622be2075",
+      "bytes": 8950,
+      "sanitized": false
+    },
+    {
+      "path": "day35/python/day35_reliability_audit.py",
+      "sha256": "7b873c07c814b75e98d05cfd1f9146dfdf546644fa6c24e01f72866c9029a430",
+      "bytes": 8632,
+      "sanitized": false
+    },
+    {
+      "path": "day35/requirements.txt",
+      "sha256": "2be9580c48a8460954a7defca044d10dad4e3494c63445da6878bd2b327e1302",
+      "bytes": 409,
+      "sanitized": false
+    }
+  ],
+  "excluded_counts": {
+    "database": 75,
+    "__pycache__": 269,
+    "uploads": 1,
+    "uploads_validated": 1,
+    "other": 1,
+    "reports": 9,
+    "logs": 40,
+    "dist": 4,
+    "releases": 2,
+    "private": 2,
+    "public": 1,
+    "signatures": 2,
+    "runtime": 7
+  }
+}

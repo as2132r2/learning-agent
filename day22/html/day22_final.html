@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day22 混合检索 Web RAG</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">DAY 22 · HYBRID RETRIEVAL</p>
+        <h1>混合检索 Web RAG</h1>
+        <p class="subtitle">向量检索 + FTS5 + RRF + LLM Reranker</p>
+      </div>
+      <span id="connection" class="connection">连接中</span>
+    </header>
+
+    <section class="upload panel">
+      <div>
+        <h2>知识库</h2>
+        <p>上传后同时同步向量索引与关键词索引。</p>
+      </div>
+      <form id="upload-form">
+        <input id="file" type="file" accept=".txt,.md,.pdf" required>
+        <button id="upload" type="submit">上传并建立双索引</button>
+      </form>
+      <p id="upload-status" class="status">支持 TXT、Markdown、PDF，最大 5MB。</p>
+    </section>
+
+    <section class="pipeline" aria-label="检索流程">
+      <span>向量检索</span><b>+</b><span>关键词检索</span><b>→</b>
+      <span>RRF</span><b>→</b><span>Reranker</span><b>→</b>
+      <span>95分守门</span><b>→</b><span>生成回答</span>
+    </section>
+
+    <section id="messages" aria-live="polite"></section>
+
+    <section class="retrieval-grid">
+      <div class="panel">
+        <h2>RRF 初排</h2>
+        <p id="rrf-summary" class="status">等待检索。</p>
+        <div id="rrf-results" class="result-list"></div>
+      </div>
+      <div class="panel">
+        <h2>Reranker 精排</h2>
+        <p id="rerank-summary" class="status">等待重排。</p>
+        <div id="rerank-results" class="result-list"></div>
+      </div>
+    </section>
+
+    <p id="request-status" class="status request-status">等待提问。</p>
+
+    <form id="ask-form" class="ask-form">
+      <textarea id="question" rows="3"
+                placeholder="根据知识库提问，例如：什么是 RAG？" disabled></textarea>
+      <div>
+        <button id="cancel" class="danger" type="button" disabled>取消</button>
+        <button id="ask" type="submit" disabled>开始混合检索</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day23 可审计 Web RAG</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">DAY 23 · AUDITED RAG</p>
+      <h1>可审计 Web RAG</h1>
+      <p>检索、引用、忠实度、完整性与一次受控修复</p>
+    </div>
+    <span id="connection">连接中</span>
+  </header>
+
+  <section class="upload panel">
+    <form id="upload-form">
+      <input id="file" type="file" accept=".txt,.md,.pdf" required>
+      <button id="upload" type="submit">上传并同步双索引</button>
+    </form>
+    <p id="upload-status">支持 TXT、Markdown、PDF，最大 5MB。</p>
+  </section>
+
+  <section class="pipeline">
+    <span>混合检索</span><b>→</b><span>Reranker</span><b>→</b>
+    <span>结构化回答</span><b>→</b><span>三层审计</span><b>→</b>
+    <span>修复一次</span><b>→</b><span>质量门控</span>
+  </section>
+
+  <section id="messages"></section>
+  <p id="request-status" class="status">等待提问。</p>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>RRF 初排</h2>
+      <p id="rrf-summary" class="status">暂无结果</p>
+      <div id="rrf-results" class="cards"></div>
+    </article>
+    <article class="panel">
+      <h2>Reranker 精排</h2>
+      <p id="rerank-summary" class="status">暂无结果</p>
+      <div id="rerank-results" class="cards"></div>
+    </article>
+  </section>
+
+  <section class="panel versions-panel">
+    <h2>回答版本与质量审计</h2>
+    <div id="versions" class="versions"></div>
+  </section>
+
+  <form id="ask-form">
+    <textarea id="question" rows="3"
+              placeholder="例如：什么是 RAG？它的工作流程是什么？" disabled></textarea>
+    <div>
+      <button id="cancel" class="danger" type="button" disabled>取消</button>
+      <button id="ask" type="submit" disabled>提问并审计</button>
+    </div>
+  </form>
+</main>
+</body>
+</html>

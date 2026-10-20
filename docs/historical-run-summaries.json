@@ -1,0 +1,85 @@
+[
+  {
+    "day": "day25",
+    "report_name": "day25_version_comparison.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "numeric_summary": {
+      "samples": 2,
+      "evaluated_samples": 0,
+      "model_calls": 0,
+      "total_tokens": 0
+    }
+  },
+  {
+    "day": "day31",
+    "report_name": "day31_load_test_report.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "created_at": "2026-10-16T01:09:22.370+00:00"
+  },
+  {
+    "day": "day31",
+    "report_name": "day31_quality_gate_report.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "numeric_summary": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "total_duration_seconds": 0.586
+    }
+  },
+  {
+    "day": "day32",
+    "report_name": "day32-dependency-scan-demo.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "created_at": "2026-10-16T01:00:11+00:00",
+    "mode": "demo",
+    "numeric_summary": {
+      "packages": 10,
+      "packages_with_findings": 1,
+      "unknown": 8,
+      "exit_code": 2
+    }
+  },
+  {
+    "day": "day32",
+    "report_name": "day32-signature-gate.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "created_at": "2026-10-16T01:06:33+00:00"
+  },
+  {
+    "day": "day32",
+    "report_name": "day32-supply-chain-pipeline.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "status": "failed"
+  },
+  {
+    "day": "day35",
+    "report_name": "fake_acceptance.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "status": "passed",
+    "created_at": "2026-10-20T03:27:04.486515+00:00",
+    "mode": "fake",
+    "plan_version": "day35-v1",
+    "numeric_summary": {
+      "expected": 12,
+      "executed": 12,
+      "passed": 12
+    }
+  },
+  {
+    "day": "day35",
+    "report_name": "live_acceptance.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "status": "passed",
+    "mode": "live",
+    "plan_version": "day35-v1"
+  },
+  {
+    "day": "day35",
+    "report_name": "reliability_audit.json",
+    "kind": "historical_local_run_not_public_repo_ci",
+    "status": "passed",
+    "created_at": "2026-10-20T03:35:00.692673+00:00",
+    "plan_version": "day35-v1"
+  }
+]

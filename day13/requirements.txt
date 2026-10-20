@@ -1,0 +1,5 @@
+# Day13 HTTP API运行时的直接依赖。
+python-dotenv==1.2.3
+langchain-openai==1.6.1
+langgraph==1.2.11
+langgraph-checkpoint-sqlite==3.1.1

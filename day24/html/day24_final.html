@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day24 高性能可审计 RAG</title><link rel="stylesheet" href="/app.css">
+<script src="/app.js" defer></script></head><body><main>
+<header><div><p class="eyebrow">DAY 24 · OPTIMIZED AUDITED RAG</p>
+<h1>高性能可审计 RAG</h1><p>缓存 · 并行评估 · 风险分级 · 预算控制</p></div>
+<span id="connection">连接中</span></header>
+
+<section class="panel controls"><h2>请求策略</h2><div class="control-grid">
+<label>风险等级<select id="risk"><option value="auto">自动判断</option><option value="low">低风险</option><option value="medium">中风险</option><option value="high">高风险</option></select></label>
+<label>最大调用数<input id="max-calls" type="number" min="0" max="20" value="7"></label>
+<label>Token软预算<input id="max-tokens" type="number" min="0" max="100000" value="8500"></label>
+<label class="check"><input id="downgrade" type="checkbox">允许中风险降到低风险</label>
+</div></section>
+
+<section class="panel upload"><form id="upload-form"><input id="file" type="file" accept=".txt,.md,.pdf" required>
+<button id="upload" type="submit">上传并同步索引</button></form><p id="upload-status">支持TXT、Markdown、PDF，最大5MB。</p></section>
+
+<section id="messages"></section><p id="status">等待提问。</p>
+<section class="grid"><article class="panel"><h2>执行计划</h2><pre id="plan">暂无</pre></article>
+<article class="panel"><h2>运行指标</h2><div id="metrics" class="metric-grid"></div></article></section>
+<section class="grid"><article class="panel"><h2>RRF初排</h2><div id="rrf" class="cards"></div></article>
+<article class="panel"><h2>Reranker精排</h2><div id="reranked" class="cards"></div></article></section>
+<section class="panel"><h2>回答版本与审计</h2><div id="versions"></div></section>
+
+<form id="ask-form"><textarea id="question" rows="3" placeholder="例如：什么是RAG？它的流程是什么？" disabled></textarea>
+<div><button id="cancel" class="danger" type="button" disabled>取消</button><button id="ask" type="submit" disabled>执行优化流水线</button></div></form>
+</main></body></html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day19 最终浏览器聊天应用</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <div>
+        <h1>Day19 浏览器 AI 助手</h1>
+        <p id="connection-status" class="status waiting">正在连接……</p>
+      </div>
+      <button id="status-button" class="secondary" type="button" disabled>
+        查询状态
+      </button>
+    </header>
+
+    <p id="request-status" class="request-status">当前没有运行中的请求。</p>
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <form id="question-form" class="question-form">
+      <textarea id="question-input" rows="3"
+                placeholder="输入问题；Ctrl+Enter 发送" disabled></textarea>
+      <div class="actions">
+        <button id="cancel-button" class="danger" type="button" disabled>
+          取消回答
+        </button>
+        <button id="send-button" type="submit" disabled>发送</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

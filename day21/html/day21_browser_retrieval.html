@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day21 浏览器知识检索</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { max-width: 960px; margin: 32px auto; padding: 0 20px;
+      color: #172033; background: #eef2f7; font-family: system-ui,sans-serif; }
+    main { padding: 28px; border-radius: 16px; background: white;
+      box-shadow: 0 10px 30px rgb(15 23 42 / 10%); }
+    form { display: flex; gap: 10px; } input { flex: 1; padding: 11px 13px;
+      border: 1px solid #94a3b8; border-radius: 9px; font-size: 16px; }
+    button { padding: 11px 20px; border: 0; border-radius: 9px;
+      color: white; background: #2563eb; cursor: pointer; }
+    button:disabled { background: #94a3b8; cursor: not-allowed; }
+    #decision { margin: 18px 0; padding: 14px; border-radius: 10px; background:#e2e8f0; }
+    #decision.allow { color:#065f46; background:#d1fae5; }
+    #decision.reject { color:#991b1b; background:#fee2e2; }
+    .result { margin: 14px 0; padding: 16px; border: 1px solid #cbd5e1;
+      border-radius: 11px; background:#f8fafc; }
+    .result.pass { border-left: 6px solid #10b981; }
+    .result.fail { border-left: 6px solid #ef4444; }
+    .meta { color:#475569; font-size:14px; }
+    .content { white-space:pre-wrap; line-height:1.65; }
+    code { padding:2px 5px; border-radius:4px; background:#e2e8f0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Day21 浏览器知识检索</h1>
+  <p>距离越小通常越相关；当前阈值由服务端统一控制。</p>
+  <form id="form">
+    <input id="question" value="什么是RAG？" maxlength="1000" required>
+    <button id="button" type="submit">检索</button>
+  </form>
+  <section id="decision">等待检索。</section>
+  <section id="results"></section>
+</main>
+<script>
+  const form = document.querySelector("#form");
+  const questionInput = document.querySelector("#question");
+  const button = document.querySelector("#button");
+  const decision = document.querySelector("#decision");
+  const results = document.querySelector("#results");
+
+  function renderResult(item) {
+    const article = document.createElement("article");
+    article.className = `result ${item.passes_threshold ? "pass" : "fail"}`;
+
+    const heading = document.createElement("h2");
+    heading.textContent = `排名 ${item.rank}｜距离 ${item.distance}`;
+    const metadata = document.createElement("p");
+    metadata.className = "meta";
+    metadata.textContent = `${item.location}｜chunk_id=${item.chunk_id}`;
+    const content = document.createElement("div");
+    content.className = "content";
+    content.textContent = item.content;
+
+    article.append(heading, metadata, content);
+    return article;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const question = questionInput.value.trim();
+    if (!question) return;
+
+    button.disabled = true;
+    decision.className = "";
+    decision.textContent = "正在生成问题向量并检索……";
+    results.replaceChildren();
+
+    try {
+      const response = await fetch("/search", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({question}),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message ?? `HTTP ${response.status}`);
+
+      decision.className = data.allowed ? "allow" : "reject";
+      decision.textContent =
+        `${data.decision}｜最佳距离=${data.best_distance}｜` +
+        `阈值=${data.threshold}。${data.warning}`;
+
+      for (const item of data.results) {
+        results.appendChild(renderResult(item));
+      }
+    } catch (error) {
+      decision.className = "reject";
+      decision.textContent = `检索失败：${error}`;
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

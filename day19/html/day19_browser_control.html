@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day19 可控制的模型流</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { max-width: 900px; margin: 30px auto; padding: 0 20px;
+      color: #172033; background: #eef2f7; font-family: system-ui, sans-serif; }
+    main { padding: 26px; border-radius: 16px; background: white;
+      box-shadow: 0 10px 30px rgb(15 23 42 / 10%); }
+    #connection-status { color: #b45309; }
+    #request-status { min-height: 24px; color: #475569; }
+    #messages { min-height: 340px; max-height: 560px; overflow-y: auto;
+      padding: 16px; border: 1px solid #cbd5e1; border-radius: 10px;
+      background: #f8fafc; }
+    .message { margin: 12px 0; padding: 12px 14px; border-radius: 11px;
+      white-space: pre-wrap; line-height: 1.65; }
+    .user { margin-left: 15%; background: #dbeafe; }
+    .assistant { margin-right: 15%; background: #dcfce7; }
+    .system { color: #475569; background: #e2e8f0; }
+    .error { color: #b91c1c; background: #fee2e2; }
+    .label { display: block; margin-bottom: 5px; font-size: 13px; font-weight: 700; }
+    form { display: flex; gap: 10px; margin-top: 16px; }
+    input { flex: 1; padding: 11px 13px; border: 1px solid #94a3b8;
+      border-radius: 9px; font-size: 16px; }
+    button { padding: 11px 18px; border: 0; border-radius: 9px; color: white;
+      background: #2563eb; cursor: pointer; }
+    button.secondary { background: #475569; }
+    button.danger { background: #dc2626; }
+    button:disabled { background: #94a3b8; cursor: not-allowed; }
+    .controls { display: flex; gap: 10px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Day19 可控制的模型流</h1>
+    <p id="connection-status">正在连接……</p>
+    <p id="request-status">当前没有运行中的请求。</p>
+    <section id="messages" aria-live="polite"></section>
+
+    <form id="question-form">
+      <input id="question-input" type="text" placeholder="向 DeepSeek 提问"
+             autocomplete="off" disabled>
+      <button id="send-button" type="submit" disabled>发送</button>
+    </form>
+
+    <div class="controls">
+      <button id="cancel-button" class="danger" type="button" disabled>取消回答</button>
+      <button id="status-button" class="secondary" type="button" disabled>查询状态</button>
+    </div>
+  </main>
+
+  <script>
+    const connectionStatus = document.querySelector("#connection-status");
+    const requestStatus = document.querySelector("#request-status");
+    const messages = document.querySelector("#messages");
+    const form = document.querySelector("#question-form");
+    const input = document.querySelector("#question-input");
+    const sendButton = document.querySelector("#send-button");
+    const cancelButton = document.querySelector("#cancel-button");
+    const statusButton = document.querySelector("#status-button");
+
+    const websocket = new WebSocket(`ws://${location.host}/ws`);
+    const answerElements = new Map();
+    let activeRequestId = null;
+    let connected = false;
+
+    function addMessage(role, text, className) {
+      const box = document.createElement("article");
+      box.className = `message ${className}`;
+      const label = document.createElement("span");
+      label.className = "label";
+      label.textContent = role;
+      const content = document.createElement("span");
+      content.textContent = text;
+      box.append(label, content);
+      messages.appendChild(box);
+      messages.scrollTop = messages.scrollHeight;
+      return content;
+    }
+
+    function updateButtons() {
+      const busy = activeRequestId !== null;
+      input.disabled = !connected || busy;
+      sendButton.disabled = !connected || busy;
+      cancelButton.disabled = !connected || !busy;
+      statusButton.disabled = !connected;
+      if (connected && !busy) input.focus();
+    }
+
+    function sendCommand(type, requestId, payload = {}) {
+      websocket.send(JSON.stringify({
+        type: type,
+        request_id: requestId,
+        payload: payload,
+      }));
+    }
+
+    function finishRequest(requestId) {
+      answerElements.delete(requestId);
+      if (activeRequestId === requestId) activeRequestId = null;
+      updateButtons();
+    }
+
+    websocket.addEventListener("open", () => {
+      connected = true;
+      connectionStatus.textContent = "连接状态：已连接";
+      connectionStatus.style.color = "#047857";
+      updateButtons();
+    });
+
+    websocket.addEventListener("message", (event) => {
+      const message = JSON.parse(event.data);
+      const requestId = message.request_id;
+      const payload = message.payload ?? {};
+
+      if (message.type === "connected") {
+        addMessage("系统", `连接 ${message.connection_id}，模型 ${payload.model}`, "system");
+      } else if (message.type === "start") {
+        requestStatus.textContent = `正在回答：${requestId}`;
+        const content = addMessage("助手", "", "assistant");
+        answerElements.set(requestId, content);
+      } else if (message.type === "token") {
+        const content = answerElements.get(requestId);
+        if (content) content.textContent += payload.text;
+        messages.scrollTop = messages.scrollHeight;
+      } else if (message.type === "done") {
+        requestStatus.textContent =
+          `回答完成：${payload.chunk_count} 块，${payload.elapsed_seconds} 秒`;
+        finishRequest(requestId);
+      } else if (message.type === "cancel_requested") {
+        requestStatus.textContent = "服务端已收到取消指令……";
+      } else if (message.type === "cancelled") {
+        requestStatus.textContent = `回答已取消，保留页面上的 ${payload.chunk_count} 个文本块。`;
+        finishRequest(requestId);
+      } else if (message.type === "status_result") {
+        addMessage("状态", JSON.stringify(payload, null, 2), "system");
+      } else if (message.type === "busy") {
+        addMessage("提示", `已有请求运行：${payload.active_request_id}`, "system");
+      } else if (message.type === "error" || message.type === "cancel_not_found") {
+        addMessage("错误", payload.message ?? message.type, "error");
+        if (requestId === activeRequestId) finishRequest(requestId);
+      }
+    });
+
+    websocket.addEventListener("close", () => {
+      connected = false;
+      activeRequestId = null;
+      connectionStatus.textContent = "连接状态：已断开";
+      connectionStatus.style.color = "#dc2626";
+      updateButtons();
+    });
+
+    websocket.addEventListener("error", () => {
+      addMessage("错误", "WebSocket 连接发生错误。", "error");
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const question = input.value.trim();
+      if (!question || activeRequestId !== null) return;
+
+      activeRequestId = `req-${crypto.randomUUID()}`;
+      addMessage("你", question, "user");
+      requestStatus.textContent = "问题已发送，等待模型……";
+      updateButtons();
+      sendCommand("ask", activeRequestId, {question: question});
+      input.value = "";
+    });
+
+    cancelButton.addEventListener("click", () => {
+      if (activeRequestId !== null) {
+        sendCommand("cancel", activeRequestId);
+        cancelButton.disabled = true;
+        requestStatus.textContent = "正在请求取消……";
+      }
+    });
+
+    statusButton.addEventListener("click", () => {
+      sendCommand("status", `status-${crypto.randomUUID()}`);
+    });
+  </script>
+</body>
+</html>

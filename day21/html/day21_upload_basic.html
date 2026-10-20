@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day21 文档上传基础</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      max-width: 760px;
+      margin: 50px auto;
+      padding: 0 20px;
+      color: #172033;
+      background: #eef2f7;
+      font-family: system-ui, sans-serif;
+    }
+    main {
+      padding: 28px;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 10px 30px rgb(15 23 42 / 10%);
+    }
+    form {
+      display: grid;
+      gap: 16px;
+      padding: 20px;
+      border: 2px dashed #94a3b8;
+      border-radius: 12px;
+    }
+    input { font: inherit; }
+    button {
+      width: fit-content;
+      padding: 10px 20px;
+      border: 0;
+      border-radius: 9px;
+      color: white;
+      background: #2563eb;
+      cursor: pointer;
+    }
+    button:disabled { background: #94a3b8; cursor: not-allowed; }
+    #status { min-height: 24px; color: #475569; }
+    pre {
+      min-height: 100px;
+      overflow-x: auto;
+      padding: 14px;
+      border-radius: 10px;
+      color: #e2e8f0;
+      background: #0f172a;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Day21 文档上传基础</h1>
+    <p>请选择 UTF-8 编码的 TXT 或 Markdown 文件，最大 1MB。</p>
+
+    <form id="upload-form">
+      <input id="document" name="document" type="file"
+             accept=".txt,.md,text/plain,text/markdown" required>
+      <button id="upload-button" type="submit">上传文档</button>
+    </form>
+
+    <p id="status">等待选择文件。</p>
+    <pre id="result">上传结果会显示在这里。</pre>
+  </main>
+
+  <script>
+    const form = document.querySelector("#upload-form");
+    const fileInput = document.querySelector("#document");
+    const uploadButton = document.querySelector("#upload-button");
+    const statusElement = document.querySelector("#status");
+    const resultElement = document.querySelector("#result");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const formData = new FormData();
+      formData.append("document", file);
+
+      uploadButton.disabled = true;
+      statusElement.textContent = `正在上传：${file.name}`;
+      resultElement.textContent = "请求处理中……";
+
+      try {
+        const response = await fetch("/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+        resultElement.textContent = JSON.stringify(data, null, 2);
+
+        if (!response.ok) {
+          statusElement.textContent = `上传失败：HTTP ${response.status}`;
+          return;
+        }
+
+        statusElement.textContent =
+          `上传成功：${data.original_name}，${data.size_bytes} bytes`;
+        form.reset();
+      } catch (error) {
+        statusElement.textContent = "网络请求失败。";
+        resultElement.textContent = String(error);
+      } finally {
+        uploadButton.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

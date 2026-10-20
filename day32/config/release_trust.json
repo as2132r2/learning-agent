@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "algorithm": "Ed25519",
+  "trusted_public_key_sha256": "73786cb05473ce3608b56d77ed8948bd524315e8716614b69a30c7a9c07d2fdb"
+}

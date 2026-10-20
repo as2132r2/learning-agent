@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day28 可观测 RAG 控制台</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">DAY 28 · OBSERVABILITY</p>
+      <h1>可观测 RAG 控制台</h1>
+      <p class="subtitle">从一次回答，追踪到每个检索、精排、生成与评估阶段。</p>
+    </div>
+    <div id="connection" class="status">正在连接</div>
+  </header>
+
+  <main>
+    <section id="metrics" class="metric-grid" aria-label="总体指标"></section>
+
+    <section class="panel ask-panel">
+      <div class="panel-title">
+        <div>
+          <p class="eyebrow">CREATE TRACE</p>
+          <h2>运行一条被追踪的 RAG 请求</h2>
+        </div>
+      </div>
+      <form id="ask-form">
+        <input id="question" value="什么是 RAG？" maxlength="300" required>
+        <label class="check">
+          <input id="simulate-error" type="checkbox">
+          模拟 Reranker 超时
+        </label>
+        <button id="submit-button" type="submit">运行并追踪</button>
+      </form>
+      <pre id="request-result" class="result">等待请求</pre>
+    </section>
+
+    <div class="workspace">
+      <section class="panel trace-list-panel">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">RECENT TRACES</p>
+            <h2>最近调用链</h2>
+          </div>
+          <button id="refresh-button" class="secondary" type="button">刷新</button>
+        </div>
+        <div id="trace-list" class="trace-list"></div>
+      </section>
+
+      <section class="panel detail-panel">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">TRACE DETAIL</p>
+            <h2>阶段瀑布与错误定位</h2>
+          </div>
+        </div>
+        <div id="trace-detail" class="empty">从左侧选择一条 Trace</div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# 不把密钥、虚拟环境、缓存和本地数据库发送给Docker构建器。
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+database/*.db
+database/*.db-shm
+database/*.db-wal
+notes/

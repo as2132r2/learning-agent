@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day20 持久化聊天</title>
+  <link rel="stylesheet" href="/app.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<main class="layout">
+  <aside>
+    <h2>对话</h2><button id="new">＋ 新对话</button>
+    <div id="sessions"></div>
+  </aside>
+  <section class="chat">
+    <header><h1>Day20 SQLite AI 助手</h1><span id="status">连接中</span></header>
+    <div id="messages"></div>
+    <p id="request-status">请选择或创建对话。</p>
+    <form id="form">
+      <textarea id="input" rows="3" placeholder="输入问题，Ctrl+Enter发送" disabled></textarea>
+      <div><button id="inspect" type="button" disabled>状态</button>
+      <button id="cancel" type="button" disabled>取消</button>
+      <button id="send" type="submit" disabled>发送</button></div>
+    </form>
+  </section>
+</main>
+</body></html>

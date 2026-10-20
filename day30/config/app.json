@@ -1,0 +1,9 @@
+{
+  "app_name": "production-rag-service",
+  "host": "127.0.0.1",
+  "port": 8050,
+  "log_level": "INFO",
+  "database_path": "day30/database/day30_production.db",
+  "request_timeout_seconds": 30.0,
+  "max_concurrency": 4
+}

@@ -13,3 +13,15 @@ runtime/
 *.sqlite*
 .fastembed_cache/
 .pytest_cache/
+**/database/
+**/runtime/
+**/logs/
+**/reports/
+**/private/
+**/uploads/
+**/uploads_validated/
+**/dist/
+**/releases/
+*.key
+*.pem
+!day32/public/artifact-ed25519-public.pem

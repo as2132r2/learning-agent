@@ -1,0 +1,257 @@
+{
+  "plan_version": "day35-v1",
+  "project": "编程学习助手",
+  "scope": "Day33-Day34既有毕业项目，不新增产品能力",
+  "case_count": 12,
+  "execution_status": "not_run",
+  "result_policy": {
+    "passed": "已有证据满足判据。",
+    "failed": "运行后不满足判据。",
+    "blocked": "环境、网络或配置阻止验证，不算通过。",
+    "not_run": "尚未执行，不算通过。"
+  },
+  "cases": [
+    {
+      "case_id": "G01",
+      "capability": "姓名记忆",
+      "steps": [
+        "在session-a说：我叫小林。",
+        "同会话问：我叫什么名字？"
+      ],
+      "checks": [
+        "回复提到小林。",
+        "两轮用户与助手消息保存在session-a。"
+      ],
+      "evidence": [
+        "最终回答",
+        "checkpoint.messages"
+      ],
+      "validation_modes": [
+        "fake",
+        "live"
+      ]
+    },
+    {
+      "case_id": "G02",
+      "capability": "会话隔离",
+      "steps": [
+        "在session-a登记小林。",
+        "切换session-b，问：我叫什么名字？"
+      ],
+      "checks": [
+        "session-b历史不包含session-a的姓名登记。",
+        "回复不声称已知小林的身份。"
+      ],
+      "evidence": [
+        "两个会话checkpoint",
+        "session-b回答"
+      ],
+      "validation_modes": [
+        "fake",
+        "live"
+      ]
+    },
+    {
+      "case_id": "G03",
+      "capability": "工具真实执行",
+      "steps": [
+        "输入：请计算(20+4)*3。"
+      ],
+      "checks": [
+        "执行add(20,4)和multiply(24,3)。",
+        "工具结果依次24和72，最终答案为72。"
+      ],
+      "evidence": [
+        "AIMessage.tool_calls",
+        "匹配ID的ToolMessage",
+        "最终回答"
+      ],
+      "validation_modes": [
+        "fake",
+        "live"
+      ]
+    },
+    {
+      "case_id": "G04",
+      "capability": "知识回答与引用",
+      "steps": [
+        "输入：根据课程资料解释RAG。"
+      ],
+      "checks": [
+        "有非空合格证据。",
+        "回答解释检索增强生成，引用编号真实存在。"
+      ],
+      "evidence": [
+        "evidence来源和正文",
+        "回答及引用编号"
+      ],
+      "validation_modes": [
+        "fake",
+        "live"
+      ]
+    },
+    {
+      "case_id": "G05",
+      "capability": "无证据拒答",
+      "steps": [
+        "让检索返回空证据，提出资料中没有的问题。"
+      ],
+      "checks": [
+        "回复资料不足。",
+        "不调用知识回答模型。"
+      ],
+      "evidence": [
+        "空evidence",
+        "模型调用计数",
+        "拒答文本"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    },
+    {
+      "case_id": "G06",
+      "capability": "批准后写入",
+      "steps": [
+        "创建标题和正文明确的/note提案。",
+        "查看暂停内容后批准该流程。"
+      ],
+      "checks": [
+        "批准前无笔记文件。",
+        "批准后文件与审批快照正文一致。",
+        "聊天历史如实记录已保存。"
+      ],
+      "evidence": [
+        "审批checkpoint",
+        "Markdown文件字节",
+        "聊天事件"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    },
+    {
+      "case_id": "G07",
+      "capability": "拒绝不写入",
+      "steps": [
+        "创建独立笔记提案。",
+        "拒绝该流程。"
+      ],
+      "checks": [
+        "状态rejected。",
+        "该提案不产生笔记文件。",
+        "拒绝后不能重试写入。"
+      ],
+      "evidence": [
+        "流程最终状态",
+        "文件集合",
+        "重试拒绝结果"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    },
+    {
+      "case_id": "G08",
+      "capability": "重启恢复",
+      "steps": [
+        "记录姓名并创建待审批提案。",
+        "关闭数据库连接与图，重新打开。",
+        "问姓名，恢复原审批。"
+      ],
+      "checks": [
+        "相同会话恢复姓名历史。",
+        "恢复前后note_id与快照哈希一致。",
+        "决定作用于原提案。"
+      ],
+      "evidence": [
+        "重建前后checkpoint",
+        "恢复结果"
+      ],
+      "validation_modes": [
+        "fake",
+        "live"
+      ]
+    },
+    {
+      "case_id": "G09",
+      "capability": "参数拦截",
+      "steps": [
+        "向工具传入数字字符串、True、inf、未知字段和超范围数值。"
+      ],
+      "checks": [
+        "每组非法参数均被运行时校验拒绝。",
+        "合法输入仍可计算72。"
+      ],
+      "evidence": [
+        "ValidationError",
+        "合法工具结果"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    },
+    {
+      "case_id": "G10",
+      "capability": "临时故障与幂等",
+      "steps": [
+        "批准时模拟EBUSY。",
+        "解除模拟故障后重试同一流程。",
+        "再次验证相同内容写入。"
+      ],
+      "checks": [
+        "故障时为failed，不能宣称saved。",
+        "重试保留原快照且仅产生一份笔记。",
+        "不同内容冲突不能覆盖。"
+      ],
+      "evidence": [
+        "错误分类",
+        "重试计数",
+        "文件内容及数量"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    },
+    {
+      "case_id": "G11",
+      "capability": "审批归属与快照保护",
+      "steps": [
+        "尝试跨会话审批或重试。",
+        "提交不匹配快照哈希。",
+        "重复批准已完成流程。"
+      ],
+      "checks": [
+        "全部拒绝，不能新增错误笔记。"
+      ],
+      "evidence": [
+        "拒绝异常",
+        "审批状态",
+        "文件集合"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    },
+    {
+      "case_id": "G12",
+      "capability": "故障边界与上限",
+      "steps": [
+        "模拟权限不足。",
+        "另一流程持续模拟临时错误并重试。"
+      ],
+      "checks": [
+        "权限不足不能直接重试。",
+        "人工重试最多2次，第3次被拒绝。"
+      ],
+      "evidence": [
+        "error_type/retryable",
+        "retry_count",
+        "拒绝异常"
+      ],
+      "validation_modes": [
+        "fake"
+      ]
+    }
+  ]
+}

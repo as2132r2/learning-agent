@@ -1,0 +1,14 @@
+.identity { margin-top: 13px; }
+.identity .control-grid { grid-template-columns: repeat(3, 1fr); }
+.feedback-panel { margin-top: 13px; border-color: #83a6ff; background: #f5f8ff; }
+.feedback-panel h2 { margin-bottom: 5px; }
+.feedback-panel p { color: var(--muted); }
+.feedback-actions { display: flex; gap: 9px; flex-wrap: wrap; }
+.feedback-actions .neutral { background: #68758c; }
+.feedback-actions button.selected { outline: 3px solid #172033; outline-offset: 2px; }
+#feedback-reason { margin-top: 10px; }
+#feedback-status.success { color: var(--green); font-weight: 700; }
+#feedback-status.failure { color: var(--red); font-weight: 700; }
+@media (max-width: 820px) {
+  .identity .control-grid { grid-template-columns: 1fr; }
+}

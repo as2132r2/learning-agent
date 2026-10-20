@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day26 灰度发布 RAG</title>
+<link rel="stylesheet" href="/day24.css"><link rel="stylesheet" href="/day25.css">
+<link rel="stylesheet" href="/app.css"><script src="/app.js" defer></script></head>
+<body><main><header><div><p class="eyebrow">DAY 26 · CANARY RELEASE</p>
+<h1>提示词 A/B 实验与灰度发布</h1><p>稳定分流 · 配置快照 · 曝光归因 · 安全护栏</p></div>
+<span id="connection">连接中</span></header>
+
+<section class="panel experiment"><h2>当前实验分配</h2>
+<div id="assignment">发送问题后显示本用户的稳定版本。</div></section>
+
+<section class="panel identity"><div class="control-grid">
+<label>用户ID<input id="user-id" value="user-xiaolin"></label>
+<label>会话ID<input id="session-id" value="xiaolin-day26"></label>
+<label>风险<select id="risk"><option value="auto">自动</option><option value="low">低</option><option value="medium">中</option><option value="high">高</option></select></label>
+<label>最大调用<input id="max-calls" type="number" value="7" min="0" max="20"></label>
+<label>Token预算<input id="max-tokens" type="number" value="8500" min="0"></label>
+<label class="check"><input id="downgrade" type="checkbox">允许中风险降级</label>
+</div></section>
+
+<section id="messages"></section><p id="status">等待提问。</p>
+<section id="feedback-panel" class="panel feedback-panel" hidden><h2>评价这次回答</h2>
+<div class="feedback-actions"><button data-rating="up" type="button">👍 有帮助</button>
+<button data-rating="neutral" class="neutral" type="button">😐 一般</button>
+<button data-rating="down" class="danger" type="button">👎 没帮助</button></div>
+<textarea id="feedback-reason" rows="2" placeholder="可选：评价原因"></textarea>
+<p id="feedback-status">请选择评价。</p></section>
+
+<section class="grid"><article class="panel"><h2>执行计划</h2><pre id="plan">暂无</pre></article>
+<article class="panel"><h2>运行指标</h2><div id="metrics" class="metric-grid"></div></article></section>
+<section class="grid"><article class="panel"><h2>RRF初排</h2><div id="rrf" class="cards"></div></article>
+<article class="panel"><h2>Reranker精排</h2><div id="reranked" class="cards"></div></article></section>
+<section class="panel"><h2>审计版本</h2><div id="versions"></div></section>
+
+<form id="ask-form"><textarea id="question" rows="3" placeholder="输入知识库问题" disabled></textarea>
+<div><button id="cancel" class="danger" type="button" disabled>取消</button>
+<button id="ask" type="submit" disabled>发送实验请求</button></div></form>
+</main></body></html>

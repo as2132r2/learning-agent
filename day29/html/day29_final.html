@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day29 标准遥测控制台</title><link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header><p>DAY 29 · STANDARD TELEMETRY</p><h1>标准化遥测 RAG</h1><span id="status">连接中</span></header>
+  <main>
+    <section id="metrics" class="metrics"></section>
+    <section class="panel">
+      <h2>生成一条 Trace</h2>
+      <form id="ask-form">
+        <input id="question" value="什么是 RAG？" required>
+        <select id="sampling"><option value="01">强制上游 sampled=1</option><option value="00">强制上游 sampled=0</option></select>
+        <label><input id="error" type="checkbox"> 模拟模型 503</label>
+        <button>运行</button>
+      </form>
+      <pre id="result">等待请求</pre>
+    </section>
+    <div class="grid">
+      <section class="panel"><h2>已导出的 Trace</h2><div id="traces"></div></section>
+      <section class="panel"><h2>Span 详情</h2><div id="detail" class="empty">选择一条 Trace</div></section>
+    </div>
+  </main><script src="/app.js"></script>
+</body></html>

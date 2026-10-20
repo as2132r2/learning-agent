@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day19 WebSocket 自动重连</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { max-width: 900px; margin: 30px auto; padding: 0 20px;
+      color: #172033; background: #eef2f7; font-family: system-ui, sans-serif; }
+    main { padding: 26px; border-radius: 16px; background: white;
+      box-shadow: 0 10px 30px rgb(15 23 42 / 10%); }
+    #connection-status { color: #b45309; }
+    #request-status { min-height: 24px; color: #475569; }
+    #messages { min-height: 340px; max-height: 540px; overflow-y: auto;
+      padding: 16px; border: 1px solid #cbd5e1; border-radius: 10px;
+      background: #f8fafc; }
+    .message { margin: 12px 0; padding: 12px 14px; border-radius: 11px;
+      white-space: pre-wrap; line-height: 1.65; }
+    .user { margin-left: 15%; background: #dbeafe; }
+    .assistant { margin-right: 15%; background: #dcfce7; }
+    .system { color: #475569; background: #e2e8f0; }
+    .warning { color: #92400e; background: #fef3c7; }
+    .error { color: #b91c1c; background: #fee2e2; }
+    .label { display: block; margin-bottom: 5px; font-size: 13px; font-weight: 700; }
+    form { display: flex; gap: 10px; margin-top: 16px; }
+    input { flex: 1; padding: 11px 13px; border: 1px solid #94a3b8;
+      border-radius: 9px; font-size: 16px; }
+    button { padding: 11px 18px; border: 0; border-radius: 9px; color: white;
+      background: #2563eb; cursor: pointer; }
+    button.secondary { background: #475569; }
+    button.danger { background: #dc2626; }
+    button:disabled { background: #94a3b8; cursor: not-allowed; }
+    .controls { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Day19 WebSocket 自动重连</h1>
+    <p id="connection-status">尚未连接</p>
+    <p id="request-status">当前没有运行中的请求。</p>
+    <section id="messages" aria-live="polite"></section>
+
+    <form id="question-form">
+      <input id="question-input" type="text" placeholder="向 DeepSeek 提问"
+             autocomplete="off" disabled>
+      <button id="send-button" type="submit" disabled>发送</button>
+    </form>
+
+    <div class="controls">
+      <button id="cancel-button" class="danger" type="button" disabled>取消回答</button>
+      <button id="disconnect-button" class="secondary" type="button" disabled>模拟断线</button>
+      <button id="reconnect-button" class="secondary" type="button" disabled>立即重连</button>
+    </div>
+  </main>
+
+  <script>
+    const connectionStatus = document.querySelector("#connection-status");
+    const requestStatus = document.querySelector("#request-status");
+    const messages = document.querySelector("#messages");
+    const form = document.querySelector("#question-form");
+    const input = document.querySelector("#question-input");
+    const sendButton = document.querySelector("#send-button");
+    const cancelButton = document.querySelector("#cancel-button");
+    const disconnectButton = document.querySelector("#disconnect-button");
+    const reconnectButton = document.querySelector("#reconnect-button");
+
+    let websocket = null;
+    let activeRequestId = null;
+    let activeAnswerElement = null;
+    let reconnectAttempt = 0;
+    let reconnectTimer = null;
+    let heartbeatTimer = null;
+    let manuallyStopped = false;
+
+    function addMessage(role, text, className) {
+      const box = document.createElement("article");
+      box.className = `message ${className}`;
+      const label = document.createElement("span");
+      label.className = "label";
+      label.textContent = role;
+      const content = document.createElement("span");
+      content.textContent = text;
+      box.append(label, content);
+      messages.appendChild(box);
+      messages.scrollTop = messages.scrollHeight;
+      return content;
+    }
+
+    function socketIsOpen() {
+      return websocket !== null && websocket.readyState === WebSocket.OPEN;
+    }
+
+    function updateButtons() {
+      const connected = socketIsOpen();
+      const busy = activeRequestId !== null;
+      input.disabled = !connected || busy;
+      sendButton.disabled = !connected || busy;
+      cancelButton.disabled = !connected || !busy;
+      disconnectButton.disabled = !connected;
+      reconnectButton.disabled = connected;
+      if (connected && !busy) input.focus();
+    }
+
+    function sendCommand(type, requestId, payload = {}) {
+      if (!socketIsOpen()) return;
+      websocket.send(JSON.stringify({type, request_id: requestId, payload}));
+    }
+
+    function startHeartbeat() {
+      clearInterval(heartbeatTimer);
+      heartbeatTimer = setInterval(() => {
+        sendCommand("ping", `ping-${crypto.randomUUID()}`);
+      }, 10000);
+    }
+
+    function scheduleReconnect() {
+      if (manuallyStopped || reconnectTimer !== null) return;
+
+      // 1、2、4、8 秒递增，最高等待 8 秒。
+      const delaySeconds = Math.min(2 ** reconnectAttempt, 8);
+      reconnectAttempt += 1;
+      connectionStatus.textContent =
+        `连接已断开，${delaySeconds} 秒后进行第 ${reconnectAttempt} 次重连……`;
+
+      reconnectTimer = setTimeout(() => {
+        reconnectTimer = null;
+        connectWebSocket();
+      }, delaySeconds * 1000);
+    }
+
+    function connectWebSocket() {
+      if (websocket &&
+          (websocket.readyState === WebSocket.OPEN ||
+           websocket.readyState === WebSocket.CONNECTING)) return;
+
+      manuallyStopped = false;
+      connectionStatus.textContent = "正在建立 WebSocket 连接……";
+      websocket = new WebSocket(`ws://${location.host}/ws`);
+
+      websocket.addEventListener("open", () => {
+        reconnectAttempt = 0;
+        connectionStatus.textContent = "连接状态：已连接";
+        connectionStatus.style.color = "#047857";
+        startHeartbeat();
+        updateButtons();
+      });
+
+      websocket.addEventListener("message", (event) => {
+        const message = JSON.parse(event.data);
+        const payload = message.payload ?? {};
+
+        if (message.type === "connected") {
+          addMessage("系统", `新连接：${message.connection_id}`, "system");
+        } else if (message.type === "start") {
+          requestStatus.textContent = `正在回答：${message.request_id}`;
+          activeAnswerElement = addMessage("助手", "", "assistant");
+        } else if (message.type === "token") {
+          if (activeAnswerElement) activeAnswerElement.textContent += payload.text;
+          messages.scrollTop = messages.scrollHeight;
+        } else if (message.type === "done" || message.type === "cancelled") {
+          requestStatus.textContent =
+            message.type === "done" ? "回答完成。" : "回答已取消。";
+          activeRequestId = null;
+          activeAnswerElement = null;
+          updateButtons();
+        } else if (message.type === "disconnecting") {
+          addMessage("系统", "服务端正在关闭这条测试连接。", "warning");
+        } else if (message.type === "error") {
+          addMessage("错误", payload.message ?? "未知错误", "error");
+          activeRequestId = null;
+          activeAnswerElement = null;
+          updateButtons();
+        }
+        // pong 是应用层心跳响应，本练习不需要显示到页面。
+      });
+
+      websocket.addEventListener("close", () => {
+        clearInterval(heartbeatTimer);
+        if (activeRequestId !== null) {
+          addMessage("系统", "连接中断，当前模型请求无法继续。", "warning");
+          activeRequestId = null;
+          activeAnswerElement = null;
+        }
+        connectionStatus.style.color = "#b45309";
+        updateButtons();
+        scheduleReconnect();
+      });
+
+      websocket.addEventListener("error", () => {
+        connectionStatus.textContent = "连接发生错误，等待重连……";
+      });
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const question = input.value.trim();
+      if (!question || activeRequestId !== null || !socketIsOpen()) return;
+
+      activeRequestId = `req-${crypto.randomUUID()}`;
+      addMessage("你", question, "user");
+      requestStatus.textContent = "等待模型回答……";
+      updateButtons();
+      sendCommand("ask", activeRequestId, {question});
+      input.value = "";
+    });
+
+    cancelButton.addEventListener("click", () => {
+      if (activeRequestId) sendCommand("cancel", activeRequestId);
+    });
+
+    disconnectButton.addEventListener("click", () => {
+      sendCommand("disconnect", null);
+    });
+
+    reconnectButton.addEventListener("click", () => {
+      clearTimeout(reconnectTimer);
+      reconnectTimer = null;
+      connectWebSocket();
+    });
+
+    connectWebSocket();
+  </script>
+</body>
+</html>

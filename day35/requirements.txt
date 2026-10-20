@@ -1,0 +1,15 @@
+# 毕业项目当前环境验证过的直接依赖版本。
+# 不是全部传递依赖的锁文件，也不包含分发文件哈希。
+aiohttp==3.14.3
+python-dotenv==1.2.3
+pydantic==2.13.5
+langchain-core==1.6.2
+langchain-openai==1.6.1
+langgraph==1.2.11
+langgraph-checkpoint-sqlite==3.1.1
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
+fastembed==0.8.0
+numpy==2.5.3
+pypdf==6.18.1
+sqlite-vec==0.1.9

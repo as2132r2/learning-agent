@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day25 在线反馈闭环 RAG</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">DAY 25 · ONLINE FEEDBACK LOOP</p>
+      <h1>在线反馈闭环 RAG</h1>
+      <p>可审计回答 · 回答追踪 · 点赞点踩 · 离线评测候选</p>
+    </div>
+    <span id="connection">连接中</span>
+  </header>
+
+  <section class="panel identity">
+    <h2>用户与请求策略</h2>
+    <div class="control-grid">
+      <label>用户ID<input id="user-id" value="user-xiaolin"></label>
+      <label>会话ID<input id="session-id" value="xiaolin-day25"></label>
+      <label>风险等级
+        <select id="risk">
+          <option value="auto">自动判断</option>
+          <option value="low">低风险</option>
+          <option value="medium">中风险</option>
+          <option value="high">高风险</option>
+        </select>
+      </label>
+      <label>最大调用数<input id="max-calls" type="number" min="0" max="20" value="7"></label>
+      <label>Token软预算<input id="max-tokens" type="number" min="0" max="100000" value="8500"></label>
+      <label class="check"><input id="downgrade" type="checkbox">允许中风险降级</label>
+    </div>
+  </section>
+
+  <section class="panel upload">
+    <form id="upload-form">
+      <input id="file" type="file" accept=".txt,.md,.pdf" required>
+      <button id="upload" type="submit">上传并同步索引</button>
+    </form>
+    <p id="upload-status">支持 TXT、Markdown、PDF，最大 5MB。</p>
+  </section>
+
+  <section id="messages"></section>
+
+  <section id="feedback-panel" class="panel feedback-panel" hidden>
+    <h2>评价刚才的回答</h2>
+    <p>评价会关联到本次回答、引用、版本、Token 和耗时。</p>
+    <div class="feedback-actions">
+      <button type="button" data-rating="up">👍 有帮助</button>
+      <button type="button" data-rating="neutral" class="neutral">😐 一般</button>
+      <button type="button" data-rating="down" class="danger">👎 没帮助</button>
+    </div>
+    <textarea id="feedback-reason" rows="2" placeholder="可选：为什么这样评价？"></textarea>
+    <p id="feedback-status">请选择评价。</p>
+  </section>
+
+  <p id="status">等待提问。</p>
+  <section class="grid">
+    <article class="panel"><h2>执行计划</h2><pre id="plan">暂无</pre></article>
+    <article class="panel"><h2>运行指标</h2><div id="metrics" class="metric-grid"></div></article>
+  </section>
+  <section class="grid">
+    <article class="panel"><h2>RRF 初排</h2><div id="rrf" class="cards"></div></article>
+    <article class="panel"><h2>Reranker 精排</h2><div id="reranked" class="cards"></div></article>
+  </section>
+  <section class="panel"><h2>回答版本与审计</h2><div id="versions"></div></section>
+
+  <form id="ask-form">
+    <textarea id="question" rows="3" placeholder="例如：什么是 RAG？它的流程是什么？" disabled></textarea>
+    <div>
+      <button id="cancel" class="danger" type="button" disabled>取消</button>
+      <button id="ask" type="submit" disabled>执行并记录回答</button>
+    </div>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day27 RAG 生产运维控制台</title><link rel="stylesheet" href="/app.css">
+<script src="/app.js" defer></script></head><body><main>
+<header><div><p class="eyebrow">DAY 27 · RAG OPERATIONS</p><h1>生产运维控制台</h1>
+<p>SLO · 燃烧率 · 告警 · 事故 · 自动回滚</p></div>
+<div><span id="connection">加载中</span><button id="run-monitor">立即监控</button></div></header>
+
+<section id="hero" class="hero"><div><span>当前级别</span><strong id="level">—</strong></div>
+<p id="reason">正在读取监控状态……</p><small id="updated">—</small></section>
+
+<section><h2>滚动窗口</h2><div id="windows" class="cards"></div></section>
+<section class="grid"><article><h2>活动告警</h2><div id="alert"></div></article>
+<article><h2>活动事故</h2><div id="incident"></div></article></section>
+<section class="grid"><article><h2>发布保护状态</h2><div id="release"></div></article>
+<article><h2>版本状态</h2><div id="versions"></div></article></section>
+<section class="grid"><article><h2>最近告警事件</h2><div id="alert-events" class="timeline"></div></article>
+<article><h2>事故时间线</h2><div id="incident-timeline" class="timeline"></div></article></section>
+<section><h2>自动回滚记录</h2><div id="rollbacks" class="timeline"></div></section>
+</main></body></html>

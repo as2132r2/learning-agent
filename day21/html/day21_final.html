@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day21 Web RAG</title><link rel="stylesheet" href="/app.css">
+<script src="/app.js" defer></script></head><body><main>
+<header><h1>Day21 文档知识库</h1><span id="connection">连接中</span></header>
+<section class="upload"><form id="upload-form"><input id="file" type="file" accept=".txt,.md,.pdf" required>
+<button id="upload" type="submit">上传并索引</button></form><p id="upload-status">支持TXT、Markdown、PDF，最大5MB。</p></section>
+<section id="messages"></section><section id="sources"></section>
+<p id="request-status">等待提问。</p><form id="ask-form"><textarea id="question" rows="3" placeholder="根据知识库提问" disabled></textarea>
+<div><button id="cancel" type="button" disabled>取消</button><button id="ask" type="submit" disabled>提问</button></div></form>
+</main></body></html>
